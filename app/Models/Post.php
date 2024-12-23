@@ -38,11 +38,7 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
-    //so a post can have very many categories
-    public function categories(): BelongsToMany
-    {
-        return $this->belongsToMany(Category::class);
-    }
+
     //a function to trim the body into a smaller text for the shortBody content
     public function shortBody(): string
     {

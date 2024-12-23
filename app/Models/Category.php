@@ -11,11 +11,6 @@ class Category extends Model
 
     use HasFactory;
 
-    protected $fillable = ['title', 'slug'];
+    protected $fillable = ['title', 'slug','image'];
 
-    //a post can have many categories
-    public function posts(): BelongsToMany
-    {
-        return $this->belongsToMany(Post::class);
-    }
 }

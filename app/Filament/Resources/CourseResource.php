@@ -17,7 +17,9 @@ class CourseResource extends Resource
 {
     protected static ?string $model = Course::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+
+    protected static ?string $navigationGroup = 'Content';
 
     public static function form(Form $form): Form
     {
@@ -40,21 +42,20 @@ class CourseResource extends Resource
                 Forms\Components\TextInput::make('fees')
                     ->required()
                     ->numeric(),
-                Forms\Components\Textarea::make('details')
+                Forms\Components\FileUpload::make('bronchure'),
+                Forms\Components\RichEditor::make('details')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\Textarea::make('course_for')
+                Forms\Components\RichEditor::make('course_for')
                     ->columnSpanFull(),
-                Forms\Components\Textarea::make('goals')
+                Forms\Components\RichEditor::make('goals')
                     ->columnSpanFull(),
-                Forms\Components\Textarea::make('presentation')
+                Forms\Components\RichEditor::make('presentation')
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('certificate')
+                Forms\Components\RichEditor::make('certificate')
                     ->maxLength(255)
                     ->default(null),
-                Forms\Components\TextInput::make('bronchure')
-                    ->maxLength(255)
-                    ->default(null),
+             
             ]);
     }
 
