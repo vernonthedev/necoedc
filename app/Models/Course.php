@@ -13,6 +13,7 @@ class Course extends Model
         'venue',
         'duration',
         'fees',
+        'category_id',
         'details',
         'course_for',
         'goals',
@@ -20,4 +21,9 @@ class Course extends Model
         'certificate',
         'bronchure',
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

@@ -45,6 +45,10 @@ class CourseResource extends Resource
                 Forms\Components\TextInput::make('fees')
                     ->required()
                     ->numeric(),
+                Forms\Components\Select::make('category_id')
+                    ->label('Category')
+                    ->relationship('category','title')
+                    ->required(),
                 Forms\Components\FileUpload::make('bronchure'),
                 Forms\Components\RichEditor::make('details')
                     ->required()
@@ -68,7 +72,9 @@ class CourseResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('description')
+                Tables\Columns\TextColumn::make('category.title')
+                    ->label('Category')
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('date')
                     ->date()
@@ -80,14 +86,6 @@ class CourseResource extends Resource
                 Tables\Columns\TextColumn::make('fees')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('certificate')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('bronchure')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
@@ -99,6 +97,7 @@ class CourseResource extends Resource
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

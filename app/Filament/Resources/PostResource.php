@@ -23,6 +23,9 @@ class PostResource extends Resource
 
     protected static ?string $navigationGroup = 'Content';
 
+    //added search functionality
+    protected static ?string $recordTitleAttribute = 'title';
+
     public static function form(Form $form): Form
     {
         return $form
