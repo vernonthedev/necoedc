@@ -25,64 +25,92 @@
         		<!-- START LOGIN AND REGISTER -->
 		<section class="login_register section-padding">
 			<div class="container">
-				<div class="row">				
+				<div class="row">
+                    {{-- Display the success or error message on redirect from form --}}
+                    @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+               
 					<div class="col-lg-12 col-xs-12 wow fadeIn">
-						<div class="register">
-                            <h4 class="login_register_title">Appy For Course:</h4>
+                        <form action="" method="post">
+                            @csrf
+                            <div class="register">
+                                <h4 class="login_register_title">Appy For Course:</h4>
+                                {{-- Display all the errors if any --}}
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
 
-                            <div class="row">
-                                <div class="col-xl-6">
-                                    <label for="fullname">Full Name</label>
-                                    <input type="text" placeholder="Enter Full Name" id="fullname" class=" form-control" name="name">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <label for="fullname">Full Name</label>
+                                        <input type="text" placeholder="Enter Full Name" id="fullname" class=" form-control" name="full_name">
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <label for="email-address">Email Address</label>
+                                        <input type="email" placeholder="Enter Email Address" id="email-address" class="form-control " name="email" >
+                                    </div>
                                 </div>
-                                <div class="col-xl-6">
-                                    <label for="email-address">Email Address</label>
-                                    <input type="email" placeholder="Enter Email Address" id="email-address" class="form-control " name="email" >
+
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <label for="city">City</label>
+                                        <input type="text" placeholder="Enter Full Name" id="city" class=" form-control" name="city">
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <label for="position">Position</label>
+                                        <input type="text" placeholder="Enter Company Position" id="position" class="form-control " name="position" >
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <label for="address">Address</label>
+                                        <input type="text" placeholder="Enter Full Address" id="address" class=" form-control" name="address">
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <label for="phone_number">Phone Number</label>
+                                        <input type="text" placeholder="Enter Phone Number" id="phone_number" class="form-control " name="phone_number" >
+                                    </div>
+                                </div>
+
+                                <label for="course_id">Select Course</label>
+                                <select name="course_id" id="course_id" class="form-control">
+                                    @foreach($courses as $course)
+                                        <option value="{{ $course->id }}">{{ $course->title }}</option>
+                                    @endforeach
+                                </select>
+
+                                <div class="form-group">
+                                    Select Payment Method
+                                    <select name="payment_details" id="" class="form-control">
+                                        <option value="Invoice Me">Invoice Me</option>
+                                        <option value="Invoice Company">Invoice Company</option>
+                                        <option value="Cheque">Cheque</option>
+                                        <option value="Cash">Cash</option>
+                                        <option value="Mobile Money">Mobile Money</option>
+                                    </select>
+                                </div>
+
+                                <input type="checkbox" name="accepted_policies" id="policy" value="1" checked>
+                                <label for="policy">I accept the Terms & Conditions and Cancellation Policy*</label>
+                                
+                                <p>Check our <a href="#"><u>Terms & Conditions of Registration.</u></a></p>
+                                <p> Check our <a href="#"><u>Cancellation Policy</u></a></p>
+
+                                <div class="form-group col-lg-12">
+                                    <button class="bg_btn bt" type="submit" name="submit">Apply</button>
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col-xl-6">
-                                    <label for="fullname">City</label>
-                                    <input type="text" placeholder="Enter Full Name" id="fullname" class=" form-control" name="name">
-                                </div>
-                                <div class="col-xl-6">
-                                    <label for="email-address">Position</label>
-                                    <input type="email" placeholder="Enter Email Address" id="email-address" class="form-control " name="email" >
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-xl-6">
-                                    <label for="fullname">Address</label>
-                                    <input type="text" placeholder="Enter Full Name" id="fullname" class=" form-control" name="name">
-                                </div>
-                                <div class="col-xl-6">
-                                    <label for="email-address">Phone Number</label>
-                                    <input type="email" placeholder="Enter Email Address" id="email-address" class="form-control " name="email" >
-                                </div>
-                            </div>
-
-
-							<div class="form-group">
-								<label for="email-address">Course Details</label>
-								<input type="email" placeholder="Enter Email Address" id="email-address" class="form-control " name="email" >
-							</div>
-							<div class="form-group">
-								<label for="cpwd">Payment Details</label>
-								<input type="password" placeholder="Enter Password" id="cpwd" class="form-control" name="password" >
-							</div>
-
-                            <input type="checkbox" name="accepted_policies" id="policy">
-                            <label for="policy">I accept the Terms & Conditions and Cancellation Policy*</label>
-							
-                            <p>Check our <a href="#"><u>Terms & Conditions of Registration.</u></a></p>
-                            <p> Check our <a href="#"><u>Cancellation Policy</u></a></p>
-
-							<div class="form-group col-lg-12">
-								<button class="bg_btn bt" type="submit" name="submit">Apply</button>
-							</div>
-						</div>
+                        </form>
 					</div><!--- END COL -->
 				</div><!--- END ROW -->
 			</div><!--- END CONTAINER -->

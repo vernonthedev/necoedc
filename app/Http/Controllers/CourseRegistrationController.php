@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CourseRegistration;
+use App\Models\Course;
 use Illuminate\Http\Request;
 
 class CourseRegistrationController extends Controller
@@ -12,23 +13,29 @@ class CourseRegistrationController extends Controller
      */
     public function index()
     {
-        return view("courseRegister");
+        $courses = Course::all();
+        return view("courseRegister", compact("courses"));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'full_name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'city' => 'required|string|max:255',
+            'position' => 'nullable|string|max:255',
+            'address' => 'required|string|max:255',
+            'phone_number' => 'required|string|max:15',
+            'course_id' => 'required|exists:courses,id',
+            'payment_details' => 'required|string',
+            'accepted_policies' => 'required|boolean',
+        ]);
+    
+        // Saving the registration data
+        CourseRegistration::create($validatedData);
+    
+        return redirect()->back()->with('success', 'You have successfully applied for the course.');
     }
 
     /**
@@ -39,25 +46,7 @@ class CourseRegistrationController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(CourseRegistration $courseRegistration)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, CourseRegistration $courseRegistration)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
+ 
     public function destroy(CourseRegistration $courseRegistration)
     {
         //
