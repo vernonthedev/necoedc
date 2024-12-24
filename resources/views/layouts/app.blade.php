@@ -502,7 +502,7 @@
                 </div>	
                 
                 <div class="fshape2 eitem" value=".5">
-                    <svg fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#0D5FF9"/></svg>					
+                    <svg fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#222854"/></svg>					
                 </div>					
                 
                 <div class="fshape3">
@@ -514,7 +514,7 @@
                 </div>					
                 
                 <div class="fshape5 eitem">
-                    <svg fill="none" viewBox="0 0 199 199"><circle cx="99.5" cy="99.5" r="99.5" fill="#0D5FF9" fill-opacity=".05"/></svg>					
+                    <svg fill="none" viewBox="0 0 199 199"><circle cx="99.5" cy="99.5" r="99.5" fill="#222854" fill-opacity=".05"/></svg>					
                 </div>					
             
             </div>
@@ -527,39 +527,39 @@
     <!-- /.main-footer -->
 
     <!-- webscripts -->
-    <script src="assets/js/jquery.min.js" ></script>
+    <script src="{{ asset('assets/js/jquery.min.js')}}" ></script>
     <!-- Latest compiled and minified Bootstrap -->
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>
     <!-- jquery-simple-mobilemenu.min -->
-    <script src="assets/js/jquery-simple-mobilemenu.js"></script>
+    <script src="{{ asset('assets/js/jquery-simple-mobilemenu.js')}}"></script>
     <!-- imagesloaded.pkgd -->
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js')}}"></script>
     <!-- masonry -->
-    <script src="assets/js/masonry.pkgd.min.js" ></script>			
+    <script src="{{ asset('assets/js/masonry.pkgd.min.js')}}" ></script>			
     <!-- modernizer JS -->		
-    <script src="assets/js/modernizr-2.8.3.min.js"></script>																	
+    <script src="{{ asset('assets/js/modernizr-2.8.3.min.js')}}"></script>																	
     <!-- owl-carousel min js  -->
-    <script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+    <script src="{{ asset('assets/owlcarousel/js/owl.carousel.min.js')}}"></script>
     <!-- waypoints -->
-    <script src="assets/js/waypoints.min.js"></script>		
+    <script src="{{ asset('assets/js/waypoints.min.js')}}"></script>		
     <!-- counterup -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="{{ asset('assets/js/jquery.counterup.min.js')}}"></script>
     <!-- jquery appear js -->			
-    <script src="assets/js/jquery.appear.js"></script>
+    <script src="{{ asset('assets/js/jquery.appear.js')}}"></script>
     <!-- magnific-popup js -->	
-    <script src="assets/js/jquery.magnific-popup.js"></script>	
+    <script src="{{ asset('assets/js/jquery.magnific-popup.js')}}"></script>	
     <!-- YouTubePopUp js -->		
-    <script src="assets/js/YouTubePopUp.jquery.js"></script>
+    <script src="{{ asset('assets/js/YouTubePopUp.jquery.js')}}"></script>
     <!-- yvpopup-active js -->		
-    <script src="assets/js/yvpopup-active.js"></script>		
+    <script src="{{ asset('assets/js/yvpopup-active.js')}}"></script>		
     <!-- scrolltopcontrol js -->
-    <script src="assets/js/scrolltopcontrol.js"></script>	
+    <script src="{{ asset('assets/js/scrolltopcontrol.js')}}"></script>	
     <!-- Wow js -->			
-    <script src="assets/js/wow.js"></script>		
+    <script src="{{ asset('assets/js/wow.js')}}"></script>		
     <!-- slick js -->			
-    <script src="assets/js/slick.js"></script>									
+    <script src="{{ asset('assets/js/slick.js')}}"></script>									
     <!-- scripts js -->
-    <script src="assets/js/scripts.js"></script>
+    <script src="{{ asset('assets/js/scripts.js')}}"></script>
     </body>
 
 

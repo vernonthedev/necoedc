@@ -107,7 +107,7 @@ body.mmactive {
   width: 30px;
 }
 #sm_menu_ham.open span{
-	background-color: #0D5FF9;
+	background-color: #222854;
 }
 #sm_menu_ham span:nth-child(1) {
   top: 0;
