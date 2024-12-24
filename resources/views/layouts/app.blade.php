@@ -209,123 +209,6 @@
 				</div>
 			</div>
 			
-			<!-- Start Drawer -->
-			<div id="mini_cart" class="min_cart_wrapper">
-				<div class="cart_drawer">
-					<div class="cart_top">
-						<a href="#" class="cart_close"><i class='bx bx-x'></i></a>
-						<h3 class="title">Courses List</h3>
-						<span class="cart_number">
-							3
-						</span>
-					</div>
-					
-					<div class="mini_cart_list">
-						<ul>
-							<li class="d-flex">
-								<div class="thumb_img_cartmini">
-									<a href="course-details.html" class="mc_img">
-										<img src="assets/img/mcart/1.jpg" alt="Product Name" >
-									</a>
-								</div>	
-								
-								<div class="product-detail">
-									<h3 class="product_name_mini">
-										 <a href="course-details.html">
-											Photography Crash Course
-										</a>
-									</h3>
-									<div class="product_info">
-										<div class="product_quanity">QTY : 1 </div>
-										<div class="product_price">
-											<span class="price_sale">$25.00</span>
-										</div>
-									</div>
-								</div>
-								
-								<div class="produc_remove">
-									<a href="#" class="remove-product">
-										<i class='bx bx-trash'></i>
-									</a>              
-								</div>
-							</li>					
-							
-							<li class="d-flex">
-								<div class="thumb_img_cartmini">
-									<a href="course-details.html" class="mc_img">
-										<img src="assets/img/mcart/2.jpg" alt="Product Name" >
-									</a>
-								</div>	
-								
-								<div class="product-detail">
-									<h3 class="product_name_mini">
-										 <a href="course-details.html">
-											Photography Crash Course
-										</a>
-									</h3>
-									<div class="product_info">
-										<div class="product_quanity">QTY : 1 </div>
-										<div class="product_price">
-											<span class="price_sale">$25.00</span>
-										</div>
-									</div>
-								</div>
-								
-								<div class="produc_remove">
-									<a href="#" class="remove-product">
-										<i class='bx bx-trash'></i>
-									</a>              
-								</div>
-							</li>					
-							
-							<li class="d-flex">
-								<div class="thumb_img_cartmini">
-									<a href="course-details.html" class="mc_img">
-										<img src="assets/img/mcart/3.jpg" alt="Product Name" >
-									</a>
-								</div>	
-								
-								<div class="product-detail">
-									<h3 class="product_name_mini">
-										 <a href="course-details.html">
-											Photography Crash Course
-										</a>
-									</h3>
-									<div class="product_info">
-										<div class="product_quanity">QTY : 1 </div>
-										<div class="product_price">
-											<span class="price_sale">$25.00</span>
-										</div>
-									</div>
-								</div>
-								
-								<div class="produc_remove">
-									<a href="#" class="remove-product">
-										<i class='bx bx-trash'></i>
-									</a>              
-								</div>
-							</li>
-						</ul>
-					</div>
-					
-					<div class="cart_drawer_btm">
-						<div class="sub-total">
-							<span class="total-title float-start">Total:</span>
-							<span class="total-price float-end">$75.00</span>
-						</div>
-						
-						<div class="bottom_group">
-							<a href="cart.html" class="button-viewcart">
-								<span>View Cart</span>
-							</a>
-							<a href="checkout.html" class="button-checkout">
-								<span>Checkout</span>
-							</a>
-						</div>
-					</div>
-				</div>				
-			</div>
-			<!-- End Drawer -->
 			
 			<div class="search_box">
 				<div class="close-btn">
@@ -334,6 +217,7 @@
 								
 				<div class="search-data">
 					<form action="#" method="get">
+                        @csrf
 						<input type="text" required>
 						<div class="line"></div>
 						<label>Type to search..</label>
@@ -343,6 +227,8 @@
 					</form>
 				</div>			
 			</div>
+
+
 		</header>
 		<!-- End Header -->
 <!-- /.main-header -->
@@ -356,13 +242,14 @@
             <div class="row">
                 <div class="col-xl-7 col-lg-7 wow fadeIn">
                     <h2 class="fntitle">Subscribe to Our  Newsletter <br> 
-                    for Latest Update</h2>
+                    for Latest Updates</h2>
                 </div>
                 
                 <div class="col-xl-5 col-lg-5 align-self-center wow fadeIn">
                     <div class="newsletter">
                         <form action="#" method="post">
-                            <input type="email" name="EMAIL" placeholder="Email Address">
+                            @csrf
+                            <input type="email" name="email" placeholder="Email Address">
                             <button type="submit">Subscribe</button>
                         </form>
                     </div>
@@ -374,10 +261,10 @@
                     <div class="single-footer">
                         <div class="about-footer">
                             <div class="footer-logo">
-                                <a href="#"><img src="assets/img/footer-logo.svg" alt="Edumon"></a>
+                                <a href="#"><img src="{{ asset('img/logo-white.png')}}" alt="NeCo EDC" width="50%"></a>
                             </div>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit varius congue Morbi 
+                                Welcome to NeCo Executive Development Centre.
                             </p>
                             
                             <div class="fot-social">
@@ -420,12 +307,12 @@
                     <div class="single-footer">
                         <h3 class="footer-title">Resources</h3>
                         <ul>
-                            <li><a href="#">Community</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Video Guides</a></li>
+                            <li><a href="#">Reports &amp; Documents</a></li>
+                            <li><a href="#">Support &amp; Community</a></li>
+                            <li><a href="#">Frequently Asked Questions</a></li>
                             <li><a href="#">Terms and Conditions</a></li>
                             <li><a href="#">Blog</a></li>
-                            <li><a href="#">Security</a></li>
+                            <li><a href="#">Certificates</a></li>
                         </ul>
                     </div>
                 </div><!-- End Col -->
@@ -436,19 +323,19 @@
                         <div class="contact-info">
                             <p>
                                 <i class='bx bx-map' ></i>
-                                <span>15 Rose StreetHarvey, IL <br>
-                                60426 USA</span>
+                                <span>Plot 2B  Moyo Close - Off  <br>
+                                    Prince Charles Drive, Kololo </span>
                             </p>
                             <p>
                                 <i class='bx bx-phone' ></i>
                                 <span>
-                                708-210-9101</span>
+                                    +256783797931/+254701241860</span>
                             </p>
 
                             <p>
                                 <i class='bx bx-envelope'></i>
                                 <span> 
-                                example@education.com</span>
+                                    info@necoedc.org</span>
                             </p>
                         </div>
                     </div>
@@ -488,7 +375,7 @@
         </div>
         
         <div class="copyright text-center wow fadeIn">
-            <p>Copyright © 2024 <a href="#">Edumon</a>. All rights reserved.</p>
+            <p>Copyright © {{ date("Y") }} <a href="#">NeCo Development Center</a>. All rights reserved.</p>
         </div>
     </section>
     <!-- /.main-footer -->
