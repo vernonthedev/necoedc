@@ -37,7 +37,6 @@ class PostResource extends Resource
                             ->schema([
                                 Forms\Components\TextInput::make('title')
                             ->required()
-                            ->searchable()
                             ->maxLength(2048)
                             //auto generate the slug from the title
                             ->reactive()

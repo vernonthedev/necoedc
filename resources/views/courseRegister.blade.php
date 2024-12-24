@@ -1,12 +1,13 @@
-<x-app-layout meta-title="Contact Us | NeCo EDC" meta-description="Contact NeCo Education Development Centre">
+<x-app-layout  meta-title="Register For Course | NeCo EDC" meta-description="">
+
     	<!-- Start Main Banner -->
 		<section class="main-banner" style="background-image: url(assets/img/bg/banner.jpg);">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-12 text-center">
-						<h2>Contact Us</h2>
+						<h2>Appy Now</h2>
 						<p>
-							<a href="{{route('home')}}" style="color: f39119;">Home</a> <i class='bx bx-chevrons-right'></i> Contact Us
+							<a href="{{route('home')}}" style="color: f39119;">Home</a> <i class='bx bx-chevrons-right'></i> Register For Course
 						</p>
 					</div>
 				</div>				
@@ -21,115 +22,72 @@
 		</section>
 		<!-- End Home Banner -->
 
-		<!-- Start Contact Us -->
-		<section class="contact_us section-padding">
+        		<!-- START LOGIN AND REGISTER -->
+		<section class="login_register section-padding">
 			<div class="container">
-				<div class="row">
-					<div class="col-xl-6 wow fadeIn">
-						<div class="contact_content">
-							<img src="assets/img/contact.jpg" alt="image">
-							<div class="contact_info">
-								<div class="row">
-									<div class="col-xl-4 col-md-4 ">
-										<div class="contact_list">
-											<div class="cicon">
-												<i class='bx bx-phone-call'></i>
-											</div>
-											<div class="cinfo_content">
-												<h4>For any Query?</h4>
-												<p>
-													<a href="#">+256-783797931</a><br>
-													<a href="#">+254-701241860</a>
-												</p>
-											</div>
-										</div>
-									</div><!-- End contact_list -->
+				<div class="row">				
+					<div class="col-lg-12 col-xs-12 wow fadeIn">
+						<div class="register">
+                            <h4 class="login_register_title">Appy For Course:</h4>
 
-									<div class="col-xl-4 col-md-4">
-										<div class="contact_list">
-											<div class="cicon">
-												<i class='bx bx-envelope' ></i>
-											</div>
-											<div class="cinfo_content">
-												<h4>Write email Us</h4>
-												<p>
-													<a href="#">info@necoedc.org</a><br>
-													<a href="#">vincent@necoedc.org</a>
-												</p>
-											</div>
-										</div>		
-									</div><!-- End contact_list -->	
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <label for="fullname">Full Name</label>
+                                    <input type="text" placeholder="Enter Full Name" id="fullname" class=" form-control" name="name">
+                                </div>
+                                <div class="col-xl-6">
+                                    <label for="email-address">Email Address</label>
+                                    <input type="email" placeholder="Enter Email Address" id="email-address" class="form-control " name="email" >
+                                </div>
+                            </div>
 
-									<div class="col-xl-4 col-md-4">
-										<div class="contact_list">
-											<div class="cicon">
-												<i class='bx bx-map' ></i>
-											</div>
-											<div class="cinfo_content">
-												<h4>Visit anytime</h4>
-												<p>
-                                                    Plot 2B  Moyo Close - Off  Prince Charles Drive, Kololo
-												</p>
-											</div>
-										</div>
-									</div><!-- End contact_list -->
-								</div>
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <label for="fullname">City</label>
+                                    <input type="text" placeholder="Enter Full Name" id="fullname" class=" form-control" name="name">
+                                </div>
+                                <div class="col-xl-6">
+                                    <label for="email-address">Position</label>
+                                    <input type="email" placeholder="Enter Email Address" id="email-address" class="form-control " name="email" >
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <label for="fullname">Address</label>
+                                    <input type="text" placeholder="Enter Full Name" id="fullname" class=" form-control" name="name">
+                                </div>
+                                <div class="col-xl-6">
+                                    <label for="email-address">Phone Number</label>
+                                    <input type="email" placeholder="Enter Email Address" id="email-address" class="form-control " name="email" >
+                                </div>
+                            </div>
+
+
+							<div class="form-group">
+								<label for="email-address">Course Details</label>
+								<input type="email" placeholder="Enter Email Address" id="email-address" class="form-control " name="email" >
 							</div>
-						</div>
-					</div> <!-- End Col -->
-					
-					<div class="col-xl-6 wow fadeIn">
-						<div class="contact-form align-self-center">
-							<div class="section-title">
-								<span>Send us email</span>
-								<h2>Feel Free to write</h2>
+							<div class="form-group">
+								<label for="cpwd">Payment Details</label>
+								<input type="password" placeholder="Enter Password" id="cpwd" class="form-control" name="password" >
 							</div>
+
+                            <input type="checkbox" name="accepted_policies" id="policy">
+                            <label for="policy">I accept the Terms & Conditions and Cancellation Policy*</label>
 							
-							<form method="post" action="{{ route('contact.store')}}">
-                                @csrf
-								<div class="row">
-									<div class="col-xl-6">
-										<input type="text" placeholder="Enter Name" class="form-control" name="name">
-									</div>	
+                            <p>Check our <a href="#"><u>Terms & Conditions of Registration.</u></a></p>
+                            <p> Check our <a href="#"><u>Cancellation Policy</u></a></p>
 
-									<div class="col-xl-6">
-										<input type="email" placeholder="Enter Email" class="form-control" name="email">
-									</div>	
-
-									<div class="col-xl-6">
-                                        <select name="inquireType" id="" class="form-control">
-                                            <option value="Technical Help">Technical Help</option>
-                                            <option value="General Inquiry">General Inquiry</option>
-                                            <option value="Personal Help">Personal Help</option>
-                                        </select>
-									</div>	
-
-									<div class="col-xl-6">
-										<input type="number" placeholder="Enter Phone" class="form-control" name="phoneNumber">
-									</div>	
-
-									<div class="col-12">
-										<textarea placeholder="Enter Message" class="form-control" name="message"></textarea>
-									</div>
-									
-									<div class="col-12">
-										<input type="submit" class="bg_btn bt" value="Send Message">
-									</div>
-								</div>
-							</form>
+							<div class="form-group col-lg-12">
+								<button class="bg_btn bt" type="submit" name="submit">Apply</button>
+							</div>
 						</div>
-					</div> <!-- End Col -->	
-					
-				</div>
-			</div>
+					</div><!--- END COL -->
+				</div><!--- END ROW -->
+			</div><!--- END CONTAINER -->
 		</section>
-		<!-- End Contact Us -->
-		
-		<!-- Start google_map -->
-		<section class="google_map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107671.30068149016!2d-94.83771425184243!3d32.5066944202184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x863635ff97df3351%3A0xb30ff0f774195933!2sLongview%2C%20TX%2C%20USA!5e0!3m2!1sen!2sbd!4v1709976191256!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>			
-		</section>
-		<!-- End google_map -->
-
-
+		<!-- END LOGIN AND REGISTER -->
+    
 </x-app-layout>
+

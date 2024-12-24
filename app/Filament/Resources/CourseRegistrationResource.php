@@ -21,6 +21,9 @@ class CourseRegistrationResource extends Resource
 
     protected static ?string $navigationGroup = 'User Content';
 
+    //added a title for easier searching
+    protected static ?string $recordTitleAttribute = 'title';
+
     public static function form(Form $form): Form
     {
         return $form
