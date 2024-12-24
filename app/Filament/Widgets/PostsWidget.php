@@ -6,6 +6,7 @@ use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use App\Models\Post;
 use App\Models\Contact;
+use App\Models\NewsletterSubscriber;
 use Filament\Support\Enums\IconPosition;
 
 class PostsWidget extends BaseWidget
@@ -23,7 +24,7 @@ class PostsWidget extends BaseWidget
                 ->descriptionIcon('heroicon-o-users', IconPosition::Before)
                 ->chart([20,3,5,10,40,70,20])
                 ->color(color: 'success'),
-            Stat::make('Email Subscribers', value: Post::count())
+            Stat::make('Email Subscribers', value: NewsletterSubscriber::count())
                 ->description('All Customers that have subscribed to our email listings')
                 ->descriptionIcon('heroicon-o-envelope', IconPosition::Before)
                 ->chart([1,5,10,20,2,70,90])
