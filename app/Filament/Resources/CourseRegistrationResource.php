@@ -27,22 +27,27 @@ class CourseRegistrationResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('full_name')
                     ->required()
+                    ->searchable()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('email')
                     ->email()
+                    ->searchable()
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('city')
                     ->required()
+                    ->searchable()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('position')
                     ->required()
+                    ->searchable()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('address')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('phone_number')
                     ->tel()
+                    ->searchable()
                     ->required()
                     ->maxLength(255),
                     Forms\Components\Select::make('course_id')

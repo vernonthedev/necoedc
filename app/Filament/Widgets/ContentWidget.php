@@ -11,6 +11,8 @@ use Filament\Support\Enums\IconPosition;
 
 class ContentWidget extends BaseWidget
 {
+    protected ?string $heading = 'Admin Based Analytics';
+    protected ?string $description = 'An overview of admin based analytics.';
     protected function getStats(): array
     {
         return [
