@@ -375,7 +375,7 @@
         </div>
         
         <div class="copyright text-center wow fadeIn">
-            <p>Copyright © {{ date("Y") }} <a href="#">NeCo Development Center</a>. All rights reserved.</p>
+            <p>Copyright © {{ date("Y") }} <a href="{{route('home')}}">NeCo Development Center</a>. All rights reserved.</p>
         </div>
     </section>
     <!-- /.main-footer -->
