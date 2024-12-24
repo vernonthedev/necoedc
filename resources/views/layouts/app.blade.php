@@ -112,19 +112,8 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-30 left-col align-self-center">
-                        <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png')}}" alt="NeCo EDC" width="20%"></a>					
-						<div class="course_cat">
-							<ul class="cat_list">
-								<li><a href="#"><i class="bx bx-grid-alt"></i>Category</a>
-									<ul class="sub-menu">
-										<li><a href="#">Business Stategy</a></li>
-										<li><a href="#">Management &amp; Leadership</a></li>
-										<li><a href="#">Personal Development</a></li>
-										<li><a href="#">Contract Management</a></li>								
-									</ul>
-								</li>
-							</ul>
-						</div>
+                        <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png')}}" alt="NeCo EDC" width="18%"></a>					
+
 					</div><!-- End Col -->			
 
 					<div class="col-40 justify-content-center d-flex align-self-center">
