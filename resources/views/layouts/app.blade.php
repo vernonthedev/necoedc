@@ -3,25 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ $metaTitle ?: '' }}</title>
+        <title>{{ $metaTitle ?: 'NeCo Education Development Centre' }}</title>
         <meta name="title" content="{{ $metaTitle ?: '' }}">
         <!-- favicons Icons -->
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/logo.png')}}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/logo.png')}}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/logo.png')}}">
         <link rel="manifest" href="">
-        <meta name="description" content="{{ $metaDescription ?: '' }}">
+        <meta name="description" content="{{ $metaDescription ?: 'Welcome to NeCo Education Development Centre' }}">
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="">
-        <meta property="og:title" content="{{ $metaTitle ?: '' }}">
+        <meta property="og:title" content="{{ $metaTitle ?: 'NeCo Education Development Centre' }}">
         <meta property="og:description" content="">
         <meta property="og:image" content="">
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:url" content="">
-        <meta name="twitter:title" content="{{ $metaTitle ?: '' }}">
-        <meta name="twitter:description" content="">
+        <meta name="twitter:title" content="{{ $metaTitle ?: 'NeCo Education Development Centre' }}">
+        <meta name="twitter:description" content="Welcome to NeCo Education Development Centre">
         <meta name="twitter:image" content="">
         <!-- Custom Scroll Bar Configurations-->
         <style>
