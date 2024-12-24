@@ -55,7 +55,7 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             //add the brand logo,favicon,and brand height
-            ->brandLogo(asset('img/logo.png'))
+            ->brandLogo(asset('img/logo-white.png'))
             ->brandLogoHeight('4rem')
             ->favicon(asset('img/logo.png'))
             //add database notifications
