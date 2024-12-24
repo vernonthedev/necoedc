@@ -22,7 +22,6 @@ class Post extends Model
         'user_id',
         'meta_title',
         'meta_description',
-        'youtube_link'
     ];
 
     //change the publised_at type from strings to datetime format

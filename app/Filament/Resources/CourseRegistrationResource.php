@@ -45,9 +45,10 @@ class CourseRegistrationResource extends Resource
                     ->tel()
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('course_id')
-                    ->required()
-                    ->numeric(),
+                    Forms\Components\Select::make('course_id')
+                    ->label('Course')
+                    ->relationship('course','title')
+                    ->required(),
                 Forms\Components\Textarea::make('payment_details')
                     ->required()
                     ->columnSpanFull(),
