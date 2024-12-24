@@ -13,7 +13,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('about-us', function () { return view('about'); })->name('about');
 Route::get('contact-us', [ContactController::class, 'index'])->name('contact');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
-Route::post('contact' ,[ContactController::class, 'store'])->name('contact.store');
+Route::post('contact-us' ,[ContactController::class, 'store'])->name('contact.store');
 Route::get('blog', [PostController::class, 'index'])->name('blog');
 Route::post('subscribe',[NewsletterSubscriberController::class, 'store'])->name('subscribe.store');
 Route::get('{post:slug}', [PostController::class, 'show'])->name('blog.show');
