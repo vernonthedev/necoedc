@@ -23,6 +23,12 @@ class Course extends Model
         'image',
     ];
 
+    //change the date type from strings to datetime format
+    //for easier display and working with
+    protected  $casts = [
+        'date'=>'datetime'
+    ];
+
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -31,5 +37,11 @@ class Course extends Model
     public function registrations()
     {
         return $this->hasMany(CourseRegistration::class);
+    }
+
+    //format the date to human readable format
+    public function getformattedDate()
+    {
+        return $this->date->format('F jS Y');
     }
 }
