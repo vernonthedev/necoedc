@@ -33,11 +33,7 @@
 						<div class="col-12 text-center">
 							<div class="post_pagination">
 								<ul>
-									<li><a href="#"><i class="fa-solid fa-arrow-left-long"></i></a></li>
-									<li><a href="#">1</a></li>
-									<li class="active"><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+									{{ $posts->onEachSide(1)->links()}}
 								</ul>
 							</div>
 						</div>
@@ -56,66 +52,12 @@
 						</div><!-- End widget -->
 
 						<div class="widget category-widget wow fadeIn">
-							<h3 class="widget-title">Category</h3>
+							<h3 class="widget-title">Categories</h3>
 							<ul>
-								<li><a href="#">UI / UX Design</a></li>
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">App Development</a></li>
-								<li><a href="#">Branding and Printing</a></li>
+								@foreach ($categories as $category)
+								<li><a href="#">{{$category->title}}</a></li>
+                                @endforeach
 							</ul>
-						</div><!-- End widget -->
-
-						<div class="widget popular-posts-widget wow fadeIn">
-							<h3 class="widget-title">Popular Posts</h3>
-							<ul>
-								<li>
-									<a href="#">
-										<div class="float-start ppimage">
-											<img src="assets/img/blog/1.jpg" alt="image">
-										</div>
-										<div class="ppcontent">
-											<h4>Lorem Ipsum is simply dummy</h4>
-											<span>10 Jan,  2024</span>
-										</div>
-									</a>
-								</li>
-
-								<li>
-									<a href="#">
-										<div class="float-start ppimage">
-											<img src="assets/img/blog/2.jpg" alt="image">
-										</div>
-										<div class="ppcontent">
-											<h4>Lorem Ipsum is simply dummy</h4>
-											<span>10 Jan,  2024</span>
-										</div>
-									</a>
-								</li>
-
-								<li>
-									<a href="#">
-										<div class="float-start ppimage">
-											<img src="assets/img/blog/3.jpg" alt="image">
-										</div>
-										<div class="ppcontent">
-											<h4>Lorem Ipsum is simply dummy</h4>
-											<span>10 Jan,  2024</span>
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div><!-- End widget -->
-
-						<div class="widget popular-posts-widget wow fadeIn">
-							<h3 class="widget-title">Tags</h3>
-							<div class="tags_clouds">
-								<a href="#">Trading</a>
-								<a href="#">Education</a>
-								<a href="#">Statistics</a>
-								<a href="#">Corporate</a>
-								<a href="#">Analysis</a>
-								<a href="#">Profit</a>
-							</div>
 						</div><!-- End widget -->
 
 					</div><!-- End Col -->

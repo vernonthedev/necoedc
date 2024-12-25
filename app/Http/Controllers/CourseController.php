@@ -28,6 +28,7 @@ class CourseController extends Controller
         ->limit(2)
         ->paginate(10);
 
+
     return view('search', compact('courses', 'posts', 'query'));
   }
 

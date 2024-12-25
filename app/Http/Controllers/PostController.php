@@ -24,56 +24,17 @@ class PostController extends Controller
         return view('blog', compact('posts','categories'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(Post $post)
     {
+        $categories = Category::paginate(10);
         // incase the posts are not active, or to be published in the future then show that they aren't found
         if(!$post->active || $post->published_at > Carbon::now()){
             throw new NotFoundHttpException();
         }
         // else we return the blogPost details.
-        return view('blogDetails', compact('post'));
+        return view('blogDetails', compact('post', 'categories'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Post $post)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Post $post)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Post $post)
-    {
-        //
-    }
+  
 }
