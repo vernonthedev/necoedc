@@ -19,7 +19,7 @@ class CourseController extends Controller
         ->where('title', 'like', "%{$query}%")
         ->orWhere('description', 'like', "%{$query}%")
         ->with('category')
-        ->get();
+        ->paginate(10);
 
     $posts = Post::query()
         ->where('active', '=', 1)
