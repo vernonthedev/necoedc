@@ -104,24 +104,28 @@
                                                 <i class="bx bxs-star"></i>
                                                 <i class="bx bxs-star"></i>
                                                 <i class="bx bxs-star"></i>
-                                                <span>(21)</span>
+                                                <span>(5)</span>
                                             </a>
                                         </div>
-                                        <h2><a href="#">{{ $course->title }}</a></h2>
+                                        <h2><a href="{{route('courses.show', $course)}}">{{ $course->title }}</a></h2>
                                         
                                         <div class="cmeta">
                                             <div class="smeta">
                                                 <i class='bx bx-user'></i>
-                                                25 Students
+                                                {{$course->getFormattedDate()}}
                                             </div>	
-
+        
                                             <div class="smeta">
                                                 <i class='bx bx-file'></i>
-                                                15 Lessons
+                                                {{$course->venue}}
                                             </div>	
+        
+                                            <div class="smeta">
+                                                <i class='bx bx-time-five'></i>
+                                                {{$course->duration}}
+                                            </div>
                                         </div>
-                                        
-                                                                           
+                                                                               
                                     </div>									
                                 </div>
                             </div>

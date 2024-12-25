@@ -12,7 +12,7 @@ use App\Http\Controllers\CourseController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('search', [CourseController::class, 'search'])->name('courses.search');
 Route::get('courses', [CourseController::class, 'index'])->name('courses.index');
-Route::get('course/{id}', [CourseController::class, 'show'])->name('courses.show');
+Route::get('course/{course}', [CourseController::class, 'show'])->name('courses.show');
 Route::get('about-us', function () { return view('about'); })->name('about');
 Route::get('contact-us', [ContactController::class, 'index'])->name('contact');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');

@@ -214,7 +214,7 @@
 					</div>	
 					
 					<div class="col-xl-4 col-md-4 align-self-center text-end title_btn wow fadeIn">
-						<a href="#" class="bg_btn bt">View All</a>
+						<a href="{{route('courses.index')}}" class="bg_btn bt">View All</a>
 					</div>
 					@foreach ($courses as $course)
 					<div class="col-xl-6 col-lg-6 wow fadeIn">
@@ -222,7 +222,7 @@
 							<div class="row">
 								<div class="col-xl-6 col-md-6 col-sm-6 col-12">
 									<div class="course-img">
-										<div class="c_image" style="background-image: url(https://fakeimg.pl/800x580);"></div>
+										<div class="c_image" style="background-image: url(/storage/{{$course->image}});"></div>
 										<div class="ccategory">
 											<a href="#">{{ $course->category->title ?? 'No Category' }}</a>
 										</div>									
@@ -238,22 +238,26 @@
 												<i class="bx bxs-star"></i>
 												<i class="bx bxs-star"></i>
 												<i class="bx bxs-star"></i>
-												<span>(21)</span>
+												<span>(5)</span>
 											</a>
 										</div>
-										<h2><a href="course-details.html">{{ $course->title}}</a></h2>
-										
+										<h2><a href="{{route('courses.show', $course)}}">{{ $course->title}}</a></h2>
 										<div class="cmeta">
 											<div class="smeta">
 												<i class='bx bx-user'></i>
-												25 Students
+												{{$course->getFormattedDate()}}
 											</div>	
-
+		
 											<div class="smeta">
 												<i class='bx bx-file'></i>
-												15 Lessons
+												{{$course->venue}}
 											</div>	
-										</div>										
+		
+											<div class="smeta">
+												<i class='bx bx-time-five'></i>
+												{{$course->duration}}
+											</div>
+										</div>									
 									</div>									
 								</div>
 							</div>

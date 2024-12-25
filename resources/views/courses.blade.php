@@ -49,7 +49,7 @@
 										<span>(5)</span>
 									</a>
 								</div>
-								<h2><a href="">{{$course->title}}</a></h2>
+								<h2><a href="{{route('courses.show', $course)}}">{{$course->title}}</a></h2>
 								
 								<div class="cmeta">
 									<div class="smeta">
