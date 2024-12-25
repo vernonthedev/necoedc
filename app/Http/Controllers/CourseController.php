@@ -30,4 +30,17 @@ class CourseController extends Controller
 
     return view('search', compact('courses', 'posts', 'query'));
   }
+
+
+
+  public function show(Course $course)
+  {
+    return view('courseDetails', compact(''));
+  }
+
+  public function index(Request $request)
+  {
+    $courses = Course::paginate(10);
+    return view('courses', compact('courses'));
+  }
 }

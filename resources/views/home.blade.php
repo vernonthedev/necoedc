@@ -24,8 +24,8 @@
 								</div>
 								
 								<div class="bbtns">
-									<a href="#" class="bg_btn bt">All Courses</a>
-									<a href="#" class="wborder_btn bt">Contact Us</a>
+									<a href="{{ route('courses.index')}}" class="bg_btn bt">All Courses</a>
+									<a href="{{route('contact')}}" class="wborder_btn bt">Contact Us</a>
 								</div>
 
 							</div>
