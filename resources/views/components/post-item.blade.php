@@ -1,14 +1,7 @@
 
-@if ($post->youtube_link == "")
-    {{ $post->thumbnail }}
-@else
-    {!! $post->youtube_link !!}
-@endif
 
+{{ $post->thumbnail }}
 
-@foreach($post->categories as $category)
-    {{ $category->title }}
-@endforeach
 
 {{$post->getFormattedDate()}}
 {{ route('blog.show', $post)}}
