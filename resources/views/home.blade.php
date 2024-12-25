@@ -215,17 +215,17 @@
 					</div>	
 					
 					<div class="col-xl-4 col-md-4 align-self-center text-end title_btn wow fadeIn">
-						<a href="courses.html" class="bg_btn bt">View All</a>
+						<a href="#" class="bg_btn bt">View All</a>
 					</div>
-
+					@foreach ($courses as $course)
 					<div class="col-xl-6 col-lg-6 wow fadeIn">
 						<div class="single-course cstyle-2">
 							<div class="row">
 								<div class="col-xl-6 col-md-6 col-sm-6 col-12">
 									<div class="course-img">
-										<div class="c_image" style="background-image: url(assets/img/courses/1.jpg);"></div>
+										<div class="c_image" style="background-image: url(https://fakeimg.pl/800x580);"></div>
 										<div class="ccategory">
-											<a href="#">WordPress</a>
+											<a href="#">{{ $course->category->title ?? 'No Category' }}</a>
 										</div>									
 									</div>
 								</div>
@@ -242,7 +242,7 @@
 												<span>(21)</span>
 											</a>
 										</div>
-										<h2><a href="course-details.html">Ultimate Photoshop Training: From Beginner</a></h2>
+										<h2><a href="course-details.html">{{ $course->title}}</a></h2>
 										
 										<div class="cmeta">
 											<div class="smeta">
@@ -254,194 +254,14 @@
 												<i class='bx bx-file'></i>
 												15 Lessons
 											</div>	
-										</div>
-										
-										<div class="course_btm">
-											<div class="cauthor">
-												<a href="#">
-													<img src="assets/img/review/1.jpg" alt="">
-													<span>Masum Billah</span>
-												</a>
-											</div>	
-											
-											<span class="cprice-2">$500</span>
-											
-										</div>											
+										</div>										
 									</div>									
 								</div>
 							</div>
 						</div>
 					</div>	
 					<!-- End Single Course -->						
-					
-					<div class="col-xl-6 col-lg-6 wow fadeIn">
-						<div class="single-course cstyle-2">
-							<div class="row">
-								<div class="col-xl-6 col-md-6 col-sm-6 col-12">
-									<div class="course-img">
-										<div class="c_image" style="background-image: url(assets/img/courses/2.jpg);"></div>
-										<div class="ccategory">
-											<a href="#">JavaScript</a>
-										</div>									
-									</div>
-								</div>
-								
-								<div class="col-xl-6 col-md-6 col-sm-6 col-12">
-									<div class="course_content">
-										<div class="crating">
-											<a href="#">
-												<i class="bx bxs-star"></i>
-												<i class="bx bxs-star"></i>
-												<i class="bx bxs-star"></i>
-												<i class="bx bxs-star"></i>
-												<i class="bx bxs-star"></i>
-												<span>(21)</span>
-											</a>
-										</div>
-										<h2><a href="course-details.html">Photography Crash Course 
-										for Photographer</a></h2>
-										
-										<div class="cmeta">
-											<div class="smeta">
-												<i class='bx bx-user'></i>
-												25 Students
-											</div>	
-
-											<div class="smeta">
-												<i class='bx bx-file'></i>
-												15 Lessons
-											</div>	
-										</div>
-										
-										<div class="course_btm">
-											<div class="cauthor">
-												<a href="#">
-													<img src="assets/img/review/1.jpg" alt="">
-													<span>Masum Billah</span>
-												</a>
-											</div>	
-											
-											<span class="cprice-2">$500</span>
-											
-										</div>											
-									</div>									
-								</div>
-							</div>
-						</div>
-					</div>	
-					<!-- End Single Course -->						
-					
-					<div class="col-xl-6 col-lg-6 wow fadeIn">
-						<div class="single-course cstyle-2">
-							<div class="row">
-								<div class="col-xl-6 col-md-6 col-sm-6 col-12">
-									<div class="course-img">
-										<div class="c_image" style="background-image: url(assets/img/courses/3.jpg);"></div>
-										<div class="ccategory">
-											<a href="#">Php</a>
-										</div>									
-									</div>
-								</div>
-								
-								<div class="col-xl-6 col-md-6 col-sm-6 col-12">
-									<div class="course_content">
-										<div class="crating">
-											<a href="#">
-												<i class="bx bxs-star"></i>
-												<i class="bx bxs-star"></i>
-												<i class="bx bxs-star"></i>
-												<i class="bx bxs-star"></i>
-												<i class="bx bxs-star"></i>
-												<span>(21)</span>
-											</a>
-										</div>
-										<h2><a href="course-details.html">Professional Ceramic Moulding for Beginners</a></h2>
-										
-										<div class="cmeta">
-											<div class="smeta">
-												<i class='bx bx-user'></i>
-												25 Students
-											</div>	
-
-											<div class="smeta">
-												<i class='bx bx-file'></i>
-												15 Lessons
-											</div>	
-										</div>
-										
-										<div class="course_btm">
-											<div class="cauthor">
-												<a href="#">
-													<img src="assets/img/review/1.jpg" alt="">
-													<span>Masum Billah</span>
-												</a>
-											</div>	
-											
-											<span class="cprice-2">$500</span>
-											
-										</div>											
-									</div>									
-								</div>
-							</div>
-						</div>
-					</div>	
-					<!-- End Single Course -->						
-					
-					<div class="col-xl-6 col-lg-6 wow fadeIn">
-						<div class="single-course cstyle-2">
-							<div class="row">
-								<div class="col-xl-6 col-md-6 col-sm-6 col-12">
-									<div class="course-img">
-										<div class="c_image" style="background-image: url(assets/img/courses/4.jpg);"></div>
-										<div class="ccategory">
-											<a href="#">Lavarel</a>
-										</div>									
-									</div>
-								</div>
-								
-								<div class="col-xl-6 col-md-6 col-sm-6 col-12">
-									<div class="course_content">
-										<div class="crating">
-											<a href="#">
-												<i class="bx bxs-star"></i>
-												<i class="bx bxs-star"></i>
-												<i class="bx bxs-star"></i>
-												<i class="bx bxs-star"></i>
-												<i class="bx bxs-star"></i>
-												<span>(21)</span>
-											</a>
-										</div>
-										<h2><a href="course-details.html">Basic Fundamentals of Interior & Graphics Design</a></h2>
-										
-										<div class="cmeta">
-											<div class="smeta">
-												<i class='bx bx-user'></i>
-												25 Students
-											</div>	
-
-											<div class="smeta">
-												<i class='bx bx-file'></i>
-												15 Lessons
-											</div>	
-										</div>
-										
-										<div class="course_btm">
-											<div class="cauthor">
-												<a href="#">
-													<img src="assets/img/review/1.jpg" alt="">
-													<span>Masum Billah</span>
-												</a>
-											</div>	
-											
-											<span class="cprice-2">$500</span>
-											
-										</div>											
-									</div>									
-								</div>
-							</div>
-						</div>
-					</div>	
-					<!-- End Single Course -->						
+					@endforeach
 							
 				</div>
 			</div>

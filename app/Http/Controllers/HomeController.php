@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Models\Post;
 use \App\Models\Category;
+use \App\Models\Course;
 use Illuminate\Support\Carbon;
 
 class HomeController extends Controller
@@ -18,9 +19,10 @@ class HomeController extends Controller
             ->orderBy('published_at','desc')
             ->limit(2)
             ->paginate(10);
-
+        // pass all the categories to home.
         $categories = Category::all();
-
-        return view('home',compact('posts','categories'));
+        // Get only 4 courses and pass them to the home view
+        $courses = Course::limit(4)->get();
+        return view('home',compact('posts','categories','courses'));
     }
 }
