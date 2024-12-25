@@ -181,6 +181,7 @@
 		</section>
 		<!-- End Courses Category -->
 
+		{{-- Search For Course --}}
         <section>
             <div class="container">
 				<div class="row">
@@ -192,9 +193,8 @@
 					</div>	
             
                     <div class="banner_search_form" style="width: 100%;">
-                        <form action="#" method="post">
-                            @csrf
-                            <input type="text" class="form-control" placeholder="What do you need to Learn ?">
+                        <form action="{{ route('courses.search') }}" method="get">
+                            <input type="text"name="query" class="form-control" placeholder="What do you need to Learn ?" value="{{ request('query') }}" required>
                             <button type="submit" class="bsearch_btn">SEARCH</button>
                         </form>
                     </div>

@@ -20,6 +20,7 @@ class Course extends Model
         'presentation',
         'certificate',
         'bronchure',
+        'image',
     ];
 
     public function category()

@@ -7,8 +7,10 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsletterSubscriberController;
 use App\Http\Controllers\CourseRegistrationController;
+use App\Http\Controllers\CourseController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('search', [CourseController::class, 'search'])->name('courses.search');
 Route::get('about-us', function () { return view('about'); })->name('about');
 Route::get('contact-us', [ContactController::class, 'index'])->name('contact');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
