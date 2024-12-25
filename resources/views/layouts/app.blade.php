@@ -282,12 +282,12 @@
                     <div class="single-footer">
                         <h3 class="footer-title">Useful Links</h3>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Courses</a></li>
-                            <li><a href="#">Categories</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{{route('home')}}">Home</a></li>
+                            <li><a href="{{route('about')}}">About Us</a></li>
+                            <li><a href="{{route('courses.index')}}">Courses</a></li>
+                            <li><a href="{{route('gallery')}}">Our Gallery Images</a></li>
+                            <li><a href="{{route('blog')}}">Our Blogs</a></li>
+                            <li><a href="{{route('contact')}}">Contact Us</a></li>
                         </ul>
                     </div>
                 </div><!-- End Col -->	
@@ -296,11 +296,11 @@
                     <div class="single-footer">
                         <h3 class="footer-title">Resources</h3>
                         <ul>
-                            <li><a href="#">Reports &amp; Documents</a></li>
+                            <li><a href="{{route('register.course.index')}}">Apply For Course</a></li>
                             <li><a href="#">Support &amp; Community</a></li>
                             <li><a href="#">Frequently Asked Questions</a></li>
                             <li><a href="#">Terms and Conditions</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Reports &amp; Documents</a></li>
                             <li><a href="#">Certificates</a></li>
                         </ul>
                     </div>
