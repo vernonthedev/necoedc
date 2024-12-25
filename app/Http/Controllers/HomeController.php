@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Models\Post;
+use \App\Models\Category;
 use Illuminate\Support\Carbon;
 
 class HomeController extends Controller
@@ -18,6 +19,8 @@ class HomeController extends Controller
             ->limit(2)
             ->paginate(10);
 
-        return view('home',compact('posts'));
+        $categories = Category::all();
+
+        return view('home',compact('posts','categories'));
     }
 }
