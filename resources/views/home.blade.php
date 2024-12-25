@@ -17,9 +17,8 @@
 							
 
                                 <div class="banner_search_form">
-									<form action="#" method="post">
-                                        @csrf
-										<input type="text" class="form-control" placeholder="What do you need to Learn ?">
+									<form action="{{ route('courses.search') }}" method="get">
+										<input type="text" name="query" class="form-control" placeholder="What do you need to Learn ?" required>
 										<button type="submit" class="bsearch_btn">SEARCH</button>
 									</form>
 								</div>
