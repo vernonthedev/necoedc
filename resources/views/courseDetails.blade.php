@@ -1,15 +1,14 @@
 <x-app-layout  meta-title="Course | NeCo EDC" meta-description="">
 
-    {{$course->title}}
-
-    		<!-- Start Main Banner -->
+    	<!-- Start Main Banner -->
 		<section class="main-banner" style="background-image: url(assets/img/bg/banner.jpg);">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-12 text-center">
 						<h2>Course Details</h2>
 						<p>
-							<a href="{{route('home')}}">Home</a> <i class='bx bx-chevrons-right'></i> Course Details
+							<a href="{{route('home')}}" style="color: whitesmoke;">Home</a> <i class='bx bx-chevrons-right'></i>     {{$course->title}}
+
 						</p>
 					</div>
 				</div>
@@ -30,32 +29,31 @@
 				<div class="row">
 					<div class="col-xl-8 wow fadeIn">
 						<div class="scourse_image">
-							<img src="assets/img/courses/cdetails.jpg" alt="image">
-							<a href="https://www.youtube.com/watch?v=AnQ7XZHnxvk" class="scbtn vbtn"><svg fill-rule="evenodd" clip-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 512 512"><path fill="#000001" d="M67.5-.5h20c7.153 2.115 14.153 4.948 21 8.5a55665.69 55665.69 0 00346 197c26.897 18.751 32.063 42.251 15.5 70.5a138.27 138.27 0 01-14.5 13.5 49163.454 49163.454 0 01-360 219 171.862 171.862 0 00-10 3.5h-19c-20.173-5.684-31.673-19.017-34.5-40-.667-144-.667-288 0-432 3.637-20.794 15.47-34.127 35.5-40zm10 45a131.554 131.554 0 0114 6.5 83499.427 83499.427 0 00337 192 12.375 12.375 0 015 4.5 31765.454 31765.454 0 01-355 218 3.647 3.647 0 01-1.5-1c-.83-140.04-.663-280.04.5-420z" opacity=".978"/></svg></a>
+							<img src="/storage/{{ $course->image}}" alt="{{$course->title}}" width="100%">
+							{{-- <a href="https://www.youtube.com/watch?v=AnQ7XZHnxvk" class="scbtn vbtn"><svg fill-rule="evenodd" clip-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 512 512"><path fill="#000001" d="M67.5-.5h20c7.153 2.115 14.153 4.948 21 8.5a55665.69 55665.69 0 00346 197c26.897 18.751 32.063 42.251 15.5 70.5a138.27 138.27 0 01-14.5 13.5 49163.454 49163.454 0 01-360 219 171.862 171.862 0 00-10 3.5h-19c-20.173-5.684-31.673-19.017-34.5-40-.667-144-.667-288 0-432 3.637-20.794 15.47-34.127 35.5-40zm10 45a131.554 131.554 0 0114 6.5 83499.427 83499.427 0 00337 192 12.375 12.375 0 015 4.5 31765.454 31765.454 0 01-355 218 3.647 3.647 0 01-1.5-1c-.83-140.04-.663-280.04.5-420z" opacity=".978"/></svg></a> --}}
 						</div>
 
 						<div class="scourse_meta">
 							<div class="smeta">
-								<img src="assets/img/instructor.jpg" alt="author">
 								<div class="smeta_text">
-									<span>Instructor:</span>
+									<span>Start Date:</span>
 									<p>
-										<a href="#">Tony Stark</a>
+										<a href="#">{{$course->getFormattedDate()}}</a>
 									</p>
 								</div>
 							</div>
 
 							<div class="smeta">
-								<span>Category:</span>
+								<span>Venue:</span>
 								<p>
-									Web Devilipment
+									{{$course->venue}}
 								</p>
 							</div>
 
 							<div class="smeta">
-								<span>Last Update:</span>
+								<span>Duration Of Course:</span>
 								<p>
-									13 March, 2024
+									{{$course->duration}}
 								</p>
 
 							</div>
@@ -84,29 +82,27 @@
 						<nav class="cd_tab">
 							<div class="nav nav-tabs" id="nav-tab" role="tablist">
 								<button class="nav-link active" id="nav-overview-tab" data-bs-toggle="tab" data-bs-target="#nav-overview" type="button" role="tab" aria-controls="nav-overview" aria-selected="true">Overview</button>
-								<button class="nav-link" id="nav-curriculum-tab" data-bs-toggle="tab" data-bs-target="#nav-curriculum" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Curriculum</button>
-								<button class="nav-link" id="nav-review-tab" data-bs-toggle="tab" data-bs-target="#nav-review" type="button" role="tab" aria-controls="nav-review" aria-selected="false">Review</button>
-								<button class="nav-link" id="nav-instructor-tab" data-bs-toggle="tab" data-bs-target="#nav-instructor" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">Instructor</button>
+								<button class="nav-link" id="nav-curriculum-tab" data-bs-toggle="tab" data-bs-target="#nav-curriculum" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Course For</button>
+								<button class="nav-link" id="nav-review-tab" data-bs-toggle="tab" data-bs-target="#nav-review" type="button" role="tab" aria-controls="nav-review" aria-selected="false">Presentation</button>
+								<button class="nav-link" id="nav-instructor-tab" data-bs-toggle="tab" data-bs-target="#nav-instructor" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">Certificate</button>
 							</div>
 						</nav>
 
 						<div class="tab-content" id="nav-tabContent">
 							<div class="tab-pane fade show active" id="nav-overview" role="tabpanel" aria-labelledby="nav-overview-tab" tabindex="0">
 								<p>
-									{{ $course->details }}
+									{!! $course->details !!}
 								</p>
-
-								<div class="row pt-2">
-									<div class="col-xl-6 align-self-center">
-										<img src="assets/img/courses/cd2.jpg" class="pb-3" alt="image">
-									</div>
-								</div>
 							</div>
 
 							<div class="tab-pane fade" id="nav-curriculum" role="tabpanel" aria-labelledby="nav-curriculum-tab" tabindex="0">
 								<div class="cd_curriculum">
-									<h3>{{ $course->course_for }}</h3>
-									{{--  <ul>
+                                    {!! $course->course_for !!}
+
+                                    <h3>Goals</h3>
+                                    {!! $course->goals !!}
+									{{-- <h3>Table</h3>
+									<ul>
 										<li><span><a href="#"><i class='bx bx-play-circle'></i> Introduction of Editing</a></span> <span class="cd_cur_right"><a href="#" class="cbtn">Preview</a>10 Minutes</span></li>
 										<li><span><a href="#"><i class='bx bx-play-circle'></i> Overview of Editing</a></span> <span class="cd_cur_right"><a href="#" class="cbtn">Preview</a>8 Minutes</span></li>
 										<li><span><a href="#"><i class='bx bx-folder'></i> Basic Editing Technology</a></span> <span class="cd_cur_right"><a href="#" class="cbtn">Preview</a>7 Minutes</span></li>
@@ -119,8 +115,10 @@
 
 							<div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab" tabindex="0">
 								<div class="cd_rating">
-									<h3>{{ $course->goals }}</h3>
-									{{--  <div class="cd_rating_top">
+                                    {!! $course->presentation !!}
+									
+                                    {{-- <h3></h3>
+									<div class="cd_rating_top">
 										<div class="cdr_rate_summary">
 											<h1>5.0</h1>
 											<span class="cdr_rating">
@@ -178,9 +176,9 @@
 												</li>
 											</ul>
 										</div>
-									</div>  --}}
+									</div> 
 
-									{{--  <div class="rating_list">
+									<div class="rating_list">
 										<div class="rating_item">
 											<div class="rating_item_avatar">
 												<img src="assets/img/review/1.jpg" alt="avatar">
@@ -199,7 +197,6 @@
 
 											<div class="rating_item_content">
 												<p>
-													{{ $course->course_for }}
 												</p>
 											</div>
 										</div><!-- End Rating Item -->
@@ -222,7 +219,6 @@
 
 											<div class="rating_item_content">
 												<p>
-													{{ $course->goals }}
 												</p>
 											</div>
 										</div><!-- End Rating Item -->
@@ -241,68 +237,39 @@
 														<i class="bx bxs-star"></i>
 													</span>
 												</div>
-											</div>  --}}
+											</div> 
 
 											<div class="rating_item_content">
 												<p>
-													{{ $course->presentation }}
+								
 												</p>
 											</div>
 										</div><!-- End Rating Item -->
-									</div><!-- End Rating List -->
+									</div> --}}
+								</div>
+							</div>
 
-									<div class="cdr_review_form">
-										<h3>Add a Review</h3>
-										<div class="review_form_ricon">
-											<i class="bx bxs-star"></i>
-											<i class="bx bxs-star"></i>
-											<i class="bx bxs-star"></i>
-											<i class="bx bxs-star"></i>
-											<i class="bx bxs-star"></i>
-										</div>
 
-										<form action="#" class="rating_form">
-											<textarea name="rating_form" placeholder="Write a Your Rating">
-											</textarea><br>
-											<button type="submit" class="bg_btn bt">
-												Submit Review
-											</button>
-										</form>
-									</div>
+                            <div class="tab-pane fade" id="nav-instructor" role="tabpanel" aria-labelledby="nav-instructor-tab" tabindex="0">
+								<div class="cd_rating">
+                                    <h3><strong>Certificate Details</strong></h3>
+                                    {!! $course->certificate !!}
+									<h3><strong>Download Course Bronchure</strong></h3>
+
+                                    @if($course->bronchure)
+                                        <!-- Download Button -->
+                                        <div class="text-left">
+                                            <a href="{{ asset('/storage/'.$course->bronchure) }}" class="bg_btn bt" download>
+                                                Download Brochure <ion-icon name="cloud-download"></ion-icon>
+                                            </a>
+                                        </div>
+                                    @else
+                                        <p>No brochure available for this course.</p>
+                                    @endif
 
 								</div>
 							</div>
 
-							<div class="tab-pane fade" id="nav-instructor" role="tabpanel" aria-labelledby="nav-instructor-tab" tabindex="0">
-								<div class="cd_instructor">
-									<div class="cdin_image">
-										<img src="assets/img/instructor.jpg" alt="">
-										<ul>
-											<li>
-												<a href="#"><i class="bx bxl-facebook"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="bx bxl-linkedin"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="bx bxl-youtube"></i></a>
-											</li>
-										</ul>
-									</div>
-
-									<div class="cdin_content">
-										<h4><a href="#">Ekram Hossain</a></h4>
-										<span>Web Designer</span>
-										<p>
-											{{ $course->certificate }}
-										</p>
-										<div class="cdin_meta">
-											<div class="cdin_meta_item"><i class="bx bx-user"></i> 25+ Students</div>
-											<div class="cdin_meta_item"><i class='bx bxs-folder-open'></i> 32 Courses</div>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
 
 					</div>

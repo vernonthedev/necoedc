@@ -403,6 +403,10 @@
     <script src="{{ asset('assets/js/slick.js')}}"></script>									
     <!-- scripts js -->
     <script src="{{ asset('assets/js/scripts.js')}}"></script>
+
+    {{-- Added Ionic Icons --}}
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 
 
