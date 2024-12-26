@@ -139,7 +139,7 @@
 								<li class="menu-item-has-children">
 									<a href="#">More Info</a>
 									<ul class="sub-menu">
-                                        <li><a href="#">Courses Offered</a></li>
+                                        <li><a href="{{route('courses.index')}}">Courses Offered</a></li>
 										<li><a href="{{ route('blog')}}">Blog Posts</a></li>
 										<li><a href="#">Certificates</a></li>
 										<li><a href="#">Events</a></li>
@@ -183,7 +183,7 @@
                         <li class="menu-item-has-children">
                             <a href="#">More Info</a>
                             <ul class="sub-menu">
-                                <li><a href="#">Courses Offered</a></li>
+                                <li><a href="{{route('courses.index')}}">Courses Offered</a></li>
                                 <li><a href="{{ route('blog')}}">Blog Posts</a></li>
                                 <li><a href="#">Certificates</a></li>
                                 <li><a href="#">Events</a></li>
@@ -205,11 +205,10 @@
 				</div>
 								
 				<div class="search-data">
-					<form action="#" method="get">
-                        @csrf
-						<input type="text" required>
+					<form action="{{ route('courses.search') }}" method="get">
+						<input type="text" required name="query">
 						<div class="line"></div>
-						<label>Type to search..</label>
+						<label>Type to search courses..</label>
 						<button type="submit">
 							<span class="ti-search"></span>
 						</button>
