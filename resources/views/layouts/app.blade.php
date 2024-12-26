@@ -235,7 +235,7 @@
                 
                 <div class="col-xl-5 col-lg-5 align-self-center wow fadeIn">
                     <div class="newsletter">
-                        <form action="#" method="post">
+                        <form action="{{route('subscribe.store')}}" method="post">
                             @csrf
                             <input type="email" name="email" placeholder="Email Address">
                             <button type="submit">Subscribe</button>
