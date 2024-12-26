@@ -284,47 +284,7 @@
 									</span>
 
 									<span class="cside-value">
-										24 Hours
-									</span>
-								</li>
-
-								<li>
-									<span class="cside-label">
-										<i class="fa-regular fa-file"></i> Lesson
-									</span>
-
-									<span class="cside-value">
-										15
-									</span>
-								</li>
-
-								<li>
-									<span class="cside-label">
-										<i class="fa-solid fa-graduation-cap"></i> Student’s
-									</span>
-
-									<span class="cside-value">
-										150
-									</span>
-								</li>
-
-								<li>
-									<span class="cside-label">
-										<i class="fa-solid fa-clapperboard"></i> Video
-									</span>
-
-									<span class="cside-value">
-										10 Hours
-									</span>
-								</li>
-
-								<li>
-									<span class="cside-label">
-										<i class="fa-solid fa-chart-line"></i> Skill Level
-									</span>
-
-									<span class="cside-value">
-										Advanced
+										{{$course->duration}}
 									</span>
 								</li>
 
@@ -340,11 +300,11 @@
 							</ul>
 
 							<div class="cd_price">
-								$400 / <span>$350</span>
+								<span>UGX {{$course->fees}}</span>
 							</div>
 
 							<div class="text-center">
-								<a href="#" class="bg_btn bt">Buy Course</a>
+								<a href="#" class="bg_btn bt">Apply For Course</a>
 							</div>
 
 							<div class="cd_social">
