@@ -11,7 +11,7 @@
             </span>
 
             <span class="bcat">
-                <a href="#">Posted by {{ Auth::user()->name }} </a>
+                {{-- <a href="#">Posted by {{ Auth::user()->name }} </a> --}}
             </span>
         </div>
 

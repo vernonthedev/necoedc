@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('courses', function (Blueprint $table) {
-            // $table->foreignId('category_id')->nullable()->references('id')->on('categories')->onDelete('cascade');
+        Schema::table('certificates', function (Blueprint $table) {
+            $table->foreignId('category_id')->nullable()->references('id')->on('category_certificates')->onDelete('cascade');
         });
     }
 
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('courses', function (Blueprint $table) {
-            // $table->dropColumn('category_id');
+        Schema::table('certificates', function (Blueprint $table) {
+            $table->dropColumn('category_id');
         });
     }
 };
