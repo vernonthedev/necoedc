@@ -13,10 +13,9 @@ class Certificate extends Model
         'description',
         'attendee',
     ];
-
     public function category()
     {
-        return $this->belongsTo(CategoryCertificate::class);
+        return $this->belongsTo(CategoryCertificate::class, 'category_id');
     }
 
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CertificateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ContactController;
@@ -13,6 +14,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('search', [CourseController::class, 'search'])->name('courses.search');
 Route::get('courses', [CourseController::class, 'index'])->name('courses.index');
 Route::get('course/{course}', [CourseController::class, 'show'])->name('courses.show');
+Route::get('{category_certificate:slug}/{certificate:slug}', [CertificateController::class, 'show'])->name('certificate.show');
 Route::get('about-us', function () { return view('about'); })->name('about');
 Route::get('contact-us', [ContactController::class, 'index'])->name('contact');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');

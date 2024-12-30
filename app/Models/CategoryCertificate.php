@@ -12,4 +12,9 @@ class CategoryCertificate extends Model
         'thumbnail',
     ];
 
+    public function certificates()
+    {
+        return $this->hasMany(Certificate::class, 'category_id');
+    }
+
 }
