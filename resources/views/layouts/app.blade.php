@@ -143,7 +143,7 @@
 										<li><a href="{{ route('blog')}}">Blog Posts</a></li>
 										<li><a href="#">Certificates</a></li>
 										<li><a href="#">Events</a></li>
-										<li><a href="#">Instructors</a></li>
+										<li><a href="{{ route('jobs')}}">Job Applications</a></li>
 									</ul>
 								</li>		
 
