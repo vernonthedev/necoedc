@@ -27,7 +27,7 @@
 				<div class="row">
 					<div class="col-xl-6 wow fadeIn">
 						<div class="contact_content">
-							<img src="assets/img/contact.jpg" alt="image">
+							<img src="img/neco (15).jpg" alt="image" style="border-radius: 20px;">
 							<div class="contact_info">
 								<div class="row">
 									<div class="col-xl-4 col-md-4 ">
@@ -127,7 +127,7 @@
 		
 		<!-- Start google_map -->
 		<section class="google_map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107671.30068149016!2d-94.83771425184243!3d32.5066944202184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x863635ff97df3351%3A0xb30ff0f774195933!2sLongview%2C%20TX%2C%20USA!5e0!3m2!1sen!2sbd!4v1709976191256!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>			
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.747866002963!2d32.59276637472345!3d0.34049879965616064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb1b4b236fb5%3A0x2019d65a63fe1ab2!2sNeCro%20Consult%20Ltd.!5e0!3m2!1sen!2sug!4v1738748601767!5m2!1sen!2sug" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>		
 		</section>
 		<!-- End google_map -->
 
