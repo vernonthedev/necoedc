@@ -127,7 +127,7 @@
 								<li class="menu-item-has-children">
 									<a href="#">About Us</a>
 									<ul class="sub-menu">
-										<li><a href="#">Mission</a></li>
+										<li><a href="{{route('about')}}">About Us</a></li>
 										<li><a href="#">Vision</a></li>
 										<li><a href="#">Board Of Executives</a></li>
 										<li><a href="#">History</a></li>

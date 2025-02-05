@@ -376,7 +376,7 @@
 				<div class="row">
 					<div class="col-xl-6 wow fadeIn">
 						<div class="faq-image">
-							<img src="{{ asset('img/logo-black.png')}}" alt="faq">
+							<img src="{{ asset('img/neco (18).jpg')}}" alt="faq">
 							{{-- <div class="faq_contact">
 								<h4>Online Support</h4>
 								<p>+256783797931</p>
