@@ -3498,65 +3498,93 @@
         </div>
     </section>
     <!-- End Home Banner -->
+<br>
+<br>
+    		<section class="faq pb120">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6 wow fadeIn">
+						<div class="faq-image">
+							<img src="{{ asset('img/neco (16).jpg')}}" alt="faq">
+							<div class="faq_contact">
+								<h4>We Empower</h4>
+								<p>Your Organization</p>
+							</div>	
+						</div>	
+					</div>	
+
+					<div class="col-xl-6 align-self-center wow fadeIn">
+						<div class="section-title">
+							<span>Company</span>
+							<h2>Our Business is to Help Advance your Career and your Organization</h2>
+							<p>Established in 2016, Neco Development Centre (Neco EDC) is a premier business consulting firm based in Kololo, Kampala, Uganda. We specialize in providing human resource solutions, strategic planning, business research, compliance advisory, and technology-driven services to organizations across East Africa. Our mission is to drive sustainable growth by empowering businesses with tailored solutions that enhance performance, streamline operations, and ensure compliance with evolving industry regulations.</p>
+						</div>							
+					</div>
+				</div>
+			</div>
+		</section>
 
     <section class="about-intro">
         <div class="container">
-
-            <div class="col-12 wow fadeInUp" style="margin-top: 20px;">
-                <div class="counter-title text-center">
-                    <h2>Empowering <span>Growth</span>, Transforming Organizations</h2>
+            <div class="row">
+                <div class="col-xl-6 align-self-center wow fadeIn">
+                    <div class="section-title">
+                        <span>Company Profile</span>
+                        <h2>Our Mission</h2>
+                        <p>To be the leading business consulting firm in East Africa, driving innovation, excellence, and sustainable growth for organizations across various industries.</p>
+<br>
+                        <h2>Our Vision</h2>
+                        <p>To be the leading business consulting firm in East Africa, driving innovation, excellence, and sustainable growth for organizations across various industries.</p>
+                    </div>							
                 </div>
+                <div class="col-xl-6 wow fadeIn">
+                    <div class="faq-image">
+                        <img src="{{ asset('img/neco (18).jpg')}}" alt="faq" width="100%">
+                    </div>	
+                </div>	                
             </div>
-
-            <p>Established in 2016, <strong>Neco Development Centre (Neco EDC)</strong> is a premier business consulting
-                firm based in <strong>Kololo, Kampala, Uganda</strong>. We specialize in providing <strong>human
-                    resource solutions, strategic planning, business research, compliance advisory, and
-                    technology-driven services</strong> to organizations across <strong>East Africa</strong>. Our
-                mission is to drive sustainable growth by empowering businesses with tailored solutions that enhance
-                performance, streamline operations, and ensure compliance with evolving industry regulations.</p>
         </div>
     </section>
 
-    <section class="expertise">
+    <br>
+    <br>
+
+    <section class="about-intro">
         <div class="container">
-            <h2>Our Expertise</h2>
-            <p>At <strong>Neco EDC</strong>, we take pride in delivering <strong>professional, data-driven, and
-                    results-oriented consulting services</strong> across multiple sectors. Our key areas of expertise
-                include:</p>
-            <ul>
-                <li><strong>Executive Staff Development</strong> – Customized training and coaching for leadership and
-                    workforce advancement.</li>
-                <li><strong>Strategic Planning</strong> – Comprehensive business strategy formulation to enhance
-                    organizational success.</li>
-                <li><strong>HR Solutions</strong> – Talent acquisition, performance management, and workforce
-                    optimization.</li>
-                <li><strong>Business Research & Data Analytics</strong> – In-depth market research, surveys, and
-                    data-driven decision-making.</li>
-                <li><strong>Employment Law Advisory</strong> – Compliance support and expert legal guidance on workplace
-                    regulations.</li>
-                <li><strong>Professional Writing, Editing, and Proofreading</strong> – High-quality content development
-                    for business and legal documentation.</li>
-            </ul>
+            <div class="row">
+                <div class="col-xl-6 wow fadeIn">
+                    <div class="faq-image">
+                        <img src="{{ asset('img/neco (14).jpg')}}" alt="faq" width="100%">
+                    </div>	
+                </div>
+                <div class="col-xl-6 align-self-center wow fadeIn">
+                    <div class="section-title">
+                        <div class="container">
+                            <h2>Why Choose Neco EDC?</h2>
+                            <ol>
+                                <li><strong>Proven Track Record</strong> – Over <strong>8 years</strong> of experience in transforming
+                                    businesses across East Africa.</li>
+                                <li><strong>Industry Expertise</strong> – A team of <strong>16-25 professionals</strong> with extensive
+                                    knowledge in multiple industries.</li>
+                                <li><strong>Customized Solutions</strong> – Tailored strategies designed to meet unique business needs.
+                                </li>
+                                <li><strong>Data-Driven Approach</strong> – We leverage advanced analytics to drive informed
+                                    decision-making.</li>
+                                <li><strong>Regulatory Compliance</strong> – Ensuring organizations meet the latest legal and
+                                    operational standards.</li>
+                            </ol>
+                        </div>
+                    </div>							
+                </div>
+            	
+
+                
+            </div>
         </div>
     </section>
 
-    <section class="why-choose-us" style="margin-top: 20px;">
-        <div class="container">
-            <h2>Why Choose Neco EDC?</h2>
-            <ol>
-                <li><strong>Proven Track Record</strong> – Over <strong>8 years</strong> of experience in transforming
-                    businesses across East Africa.</li>
-                <li><strong>Industry Expertise</strong> – A team of <strong>16-25 professionals</strong> with extensive
-                    knowledge in multiple industries.</li>
-                <li><strong>Customized Solutions</strong> – Tailored strategies designed to meet unique business needs.
-                </li>
-                <li><strong>Data-Driven Approach</strong> – We leverage advanced analytics to drive informed
-                    decision-making.</li>
-                <li><strong>Regulatory Compliance</strong> – Ensuring organizations meet the latest legal and
-                    operational standards.</li>
-            </ol>
-        </div>
-    </section>
+
+
 
 
 
@@ -3599,8 +3627,6 @@
                                     <li><strong>Saturday:</strong> 8:00 AM - 1:00 PM</li>
                                 </ul>
                         </div>
-                        <img src="{{ asset('img/neco (15).jpg')}}" class="cta_img" alt="NeCo EDC" width="40%">
-
                     </div>
                 </div><!-- End Col -->
 
