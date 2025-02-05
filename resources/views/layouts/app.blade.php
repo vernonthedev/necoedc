@@ -125,13 +125,14 @@
 								</li>	
 
 								<li class="menu-item-has-children">
-									<a href="#">About Us</a>
-									<ul class="sub-menu">
-										<li><a href="{{route('about')}}">About Us</a></li>
-										<li><a href="#">Vision</a></li>
-										<li><a href="#">Board Of Executives</a></li>
-										<li><a href="#">History</a></li>
-										<li><a href="#">Services</a></li>
+									<a href="{{route('about')}}">About Us</a>
+                                    <ul class="sub-menu">
+										<li><a href="{{route('about')}}">About Our Company</a></li>
+										<li><a href="#">In House Solutions</a></li>
+										<li><a href="#">Employment Law Advisory</a></li>
+										<li><a href="#">Strategy Development</a></li>	
+										<li><a href="#">HR Solutions</a></li>	
+										<li><a href="#">Research And Data Analytics</a></li>	
 									</ul>
 								</li>	
                                 
@@ -139,16 +140,14 @@
 								<li class="menu-item-has-children">
 									<a href="#">More Info</a>
 									<ul class="sub-menu">
-                                        <li><a href="{{route('courses.index')}}">Courses Offered</a></li>
-										<li><a href="{{ route('blog')}}">Blog Posts</a></li>
-										<li><a href="#">Certificates</a></li>
-										<li><a href="#">Events</a></li>
-										<li><a href="{{ route('jobs')}}">Job Applications</a></li>
+                                        <li><a href="{{route('courses.index')}}">Find Courses</a></li>
+										<li><a href="{{ route('blog')}}">Our Blog</a></li>
+                                        <li><a href="{{ route('jobs')}}">Job Applications</a></li>
 									</ul>
 								</li>		
 
 								<li>
-									<a href="{{route('contact')}}">Contact</a>
+									<a href="{{route('contact')}}">Contact Us</a>
 								</li>
 							</ul>
 						</nav>
