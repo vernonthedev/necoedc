@@ -247,27 +247,40 @@
                     <div class="single-footer">
                         <div class="about-footer">
                             <div class="footer-logo">
-                                <a href="#"><img src="{{ asset('img/logo-white.png')}}" alt="NeCo EDC" width="50%"></a>
+                                <a href="{{route('home')}}"><img src="{{ asset('img/logo-white.png')}}" alt="NeCo Executive Development Center" width="50%"></a>
                             </div>
                             <p>
-                                Welcome to NeCo Executive Development Centre.
+                                <i class='bx bx-map' ></i>
+                                <span>Plot 2B  Moyo Close - Off  <br>
+                                    Prince Charles Drive, Kololo </span>
+                            </p>
+                            <p>
+                                <i class='bx bx-phone' ></i>
+                                <span>
+                                    +256-783-797-931</span>
+                            </p>
+
+                            <p>
+                                <i class='bx bx-envelope'></i>
+                                <span> 
+                                    info@necoedc.org</span>
                             </p>
                             
                             <div class="fot-social">
                                 <span>Follow Us On :</span>
                                 <ul>
                                     <li>
-                                        <a href="#"><i class="bx bxl-facebook"></i></a>
+                                        <a href="https://www.facebook.com/share/1EgjT7C9Se/?mibextid=wwXIfr"><i class="bx bxl-facebook"></i></a>
                                     </li>
 
                                     <li>
-                                        <a href="#"><i class="bx bxl-twitter"></i></a>										
+                                        <a href="https://x.com/necoedc?s=21"><i class="bx bxl-twitter"></i></a>										
                                     </li>
                                     <li>
-                                        <a href="#"><i class="bx bxl-linkedin"></i></a>	
+                                        <a href="https://www.instagram.com/necoedc?igsh=MXU5OXlzam93OGVncA%3D%3D&utm_source=qr"><i class="bx bxl-instagram"></i></a>	
                                     </li>
                                     <li>
-                                        <a href="#"><i class="bx bxl-youtube"></i></a>								
+                                        <a href="https://www.youtube.com/@NeCoEDC"><i class="bx bxl-youtube"></i></a>								
                                     </li>																				
                                 </ul>
                             </div>
@@ -277,14 +290,15 @@
                 
                 <div class="col-xl-3 col-md-6 col-12 wow fadeIn">
                     <div class="single-footer">
-                        <h3 class="footer-title">Useful Links</h3>
+                        <h3 class="footer-title">Quick Links</h3>
                         <ul>
                             <li><a href="{{route('home')}}">Home</a></li>
                             <li><a href="{{route('about')}}">About Us</a></li>
-                            <li><a href="{{route('courses.index')}}">Courses</a></li>
-                            <li><a href="{{route('gallery')}}">Our Gallery Images</a></li>
-                            <li><a href="{{route('blog')}}">Our Blogs</a></li>
-                            <li><a href="{{route('contact')}}">Contact Us</a></li>
+                            <li><a href="{{route('courses.index')}}">HR Solutions</a></li>
+                            <li><a href="{{route('courses.index')}}">Strategy Development</a></li>
+                            <li><a href="{{route('courses.index')}}">Employment Law Advisory</a></li>
+                            <li><a href="{{route('courses.index')}}">Research &amp; Data Analytics</a></li>
+                            <li><a href="{{route('blog')}}">Articles</a></li>
                         </ul>
                     </div>
                 </div><!-- End Col -->	
@@ -293,12 +307,13 @@
                     <div class="single-footer">
                         <h3 class="footer-title">Resources</h3>
                         <ul>
-                            <li><a href="{{route('register.course.index')}}">Apply For Course</a></li>
-                            <li><a href="#">Support &amp; Community</a></li>
                             <li><a href="#">Frequently Asked Questions</a></li>
-                            <li><a href="#">Terms and Conditions</a></li>
-                            <li><a href="#">Reports &amp; Documents</a></li>
-                            <li><a href="#">Certificates</a></li>
+                            <li><a href="#">Training Topics</a></li>
+                            <li><a href="#">Open Workshops</a></li>
+                            <li><a href="#">Inhouse Solutions</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Job Opportunities</a></li>
+                            <li><a href="#">Our Privacy Statement</a></li>
                         </ul>
                     </div>
                 </div><!-- End Col -->
