@@ -40,9 +40,9 @@ class ContactController extends Controller
 
         $contact = new Contact();
         $contact->name = $validatedData['name'];
-        $contact->email = $validatedData['email'];
+        $contact->email = $validatedData['email'] ?? null;
         $contact->phoneNumber = $validatedData['phoneNumber'];
-        $contact->inquireType = $validatedData['inquireType'];
+        $contact->inquireType = $validatedData['inquireType'] ?? null;
         $contact->message = $validatedData['message'];
 
         if (!$contact->save()) {
