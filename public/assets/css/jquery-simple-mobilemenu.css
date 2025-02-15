@@ -15,7 +15,7 @@ body.mmactive {
   padding-top: 60px;
 }
 .sm_menu_outer {
-  height: calc(100vh - 60px);
+  /* height: calc(100vh - 60px); */
   overflow-y: scroll;
   overflow-x: hidden;
   position: fixed;
