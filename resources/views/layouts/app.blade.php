@@ -139,19 +139,22 @@
         }
 
         /* Flex container for the logo and navigation */
-        .row {
+        #nav-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: nowrap;
-            padding: 10px 20px;
+            padding: 20px 20px;
             width: 100%;
         }
 
         @media (max-width: 768px) {
-            .row {
+            #nav-row {
                 flex-wrap: wrap-reverse;
             }
+        #navigation {
+            display: none;
+        }
         }
 
         #main-menu {
@@ -223,7 +226,7 @@
     <!-- Start Header -->
     <header id="navigation">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row" id="nav-row">
                 <!-- End Col -->
                 <div class="">
                     <nav id="main-menu">
@@ -245,7 +248,7 @@
                             </li>
 
                             <li class="menu-item-has-children">
-                                <a href="{{route('courses.index')}}">Training Topics</a>
+                                <a href="#">Training Topics</a>
                                 <ul class="sub-menu">
                                     <li><a href="{{route('courses.index')}}">In House Solutions</a></li>
                                     <li><a href="{{route('courses.index')}}">Employment Law Advisory</a></li>
@@ -285,7 +288,7 @@
                     </li>
 
                     <li class="menu-item-has-children">
-                        <a href="{{route('courses.index')}}">Training Topics</a>
+                        <a href="#">Training Topics</a>
                         <ul class="sub-menu">
                             <li><a href="{{route('courses.index')}}">In House Solutions</a></li>
                             <li><a href="{{route('courses.index')}}">Employment Law Advisory</a></li>
