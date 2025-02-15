@@ -145,10 +145,18 @@
             align-items: center;
             flex-wrap: nowrap;
             padding: 10px 20px;
-            width: 100%; 
+            width: 100%;
         }
+
+        @media (max-width: 768px) {
+            .row {
+                flex-wrap: wrap-reverse;
+            }
+        }
+
         #main-menu {
-            flex-grow: 1;         }
+            flex-grow: 1;
+        }
 
         #main-menu ul {
             display: flex;
@@ -156,7 +164,7 @@
             padding: 0;
             margin: 0;
             gap: 25px;
-            flex-wrap: nowrap; 
+            flex-wrap: nowrap;
         }
 
         #main-menu .sub-menu {
@@ -233,31 +241,29 @@
                             </li>
 
                             <li>
-                                <a href="{{route('contact')}}">Our Services</a>
+                                <a href="{{route('about')}}">Our Services</a>
                             </li>
 
                             <li class="menu-item-has-children">
-                                <a href="{{route('about')}}">Training Topics</a>
+                                <a href="{{route('courses.index')}}">Training Topics</a>
                                 <ul class="sub-menu">
-                                    <li><a href="{{route('about')}}">About NeCo EDC</a></li>
-                                    <li><a href="#">In House Solutions</a></li>
-                                    <li><a href="#">Employment Law Advisory</a></li>
-                                    <li><a href="#">Strategy Development</a></li>
-                                    <li><a href="#">HR Solutions</a></li>
-                                    <li><a href="#">Research And Data Analytics</a></li>
+                                    <li><a href="{{route('courses.index')}}">In House Solutions</a></li>
+                                    <li><a href="{{route('courses.index')}}">Employment Law Advisory</a></li>
+                                    <li><a href="{{route('courses.index')}}">Strategy Development</a></li>
+                                    <li><a href="{{route('courses.index')}}">Research And Data Analytics</a></li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="{{route('contact')}}">NeCo HR</a>
+                                <a href="{{route('about')}}">NeCo HR</a>
                             </li>
 
                             <li>
-                                <a href="{{route('contact')}}">Articles</a>
+                                <a href="{{route('blog')}}">Articles</a>
                             </li>
 
                             <li>
-                                <a href="{{route('contact')}}">About Us</a>
+                                <a href="{{route('about')}}">About Us</a>
                             </li>
 
                             <li>
@@ -270,33 +276,38 @@
 
                 <ul class='mobile_menu'>
                     <li>
-                        <a href="{{route('home')}}">Home</a>
+                        <a href="{{ route('home')}}">Home</a>
+
+                    </li>
+
+                    <li>
+                        <a href="{{route('about')}}">Our Services</a>
                     </li>
 
                     <li class="menu-item-has-children">
-                        <a href="{{route('about')}}">About Us</a>
+                        <a href="{{route('courses.index')}}">Training Topics</a>
                         <ul class="sub-menu">
-                            <li><a href="{{route('about')}}">About NeCo EDC</a></li>
-                            <li><a href="#">In House Solutions</a></li>
-                            <li><a href="#">Employment Law Advisory</a></li>
-                            <li><a href="#">Strategy Development</a></li>
-                            <li><a href="#">HR Solutions</a></li>
-                            <li><a href="#">Research And Data Analytics</a></li>
-                        </ul>
-                    </li>
-
-
-                    <li class="menu-item-has-children">
-                        <a href="#">More Info</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{route('courses.index')}}">Find Courses</a></li>
-                            <li><a href="{{ route('blog')}}">Our Blog</a></li>
-                            <li><a href="{{ route('jobs')}}">Job Applications</a></li>
+                            <li><a href="{{route('courses.index')}}">In House Solutions</a></li>
+                            <li><a href="{{route('courses.index')}}">Employment Law Advisory</a></li>
+                            <li><a href="{{route('courses.index')}}">Strategy Development</a></li>
+                            <li><a href="{{route('courses.index')}}">Research And Data Analytics</a></li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="{{route('contact')}}">Contact</a>
+                        <a href="{{route('about')}}">NeCo HR</a>
+                    </li>
+
+                    <li>
+                        <a href="{{route('blog')}}">Articles</a>
+                    </li>
+
+                    <li>
+                        <a href="{{route('about')}}">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="{{route('contact')}}">Contact Us</a>
                     </li>
                 </ul>
             </div>

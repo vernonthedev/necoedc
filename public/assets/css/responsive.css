@@ -8,6 +8,7 @@
 		margin-right: 25px;
 	}
 	#main-menu li {
+		display: none;
 		padding: 5px 12px;
 	}	
 	.cat_list {
