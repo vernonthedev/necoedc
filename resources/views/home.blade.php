@@ -74,18 +74,19 @@
 						</div>
 					</div>	
 					
-					@foreach ($categories as $category)
-						
-
-					
-					<div class="col-xl-3 col-lg-4 col-md-6 col-12 wow fadeIn">
-						<div class="single-category">
-							  <img src="/storage/{{ $category->image}}" alt="{{ $category->title}}" style="border-radius: 20px;">
-							<h3><a href="#">{{ $category->title}}</a></h3>
-							<span><a href="#">View Courses</a></span>
+					<div class="row">
+						@foreach ($categories as $category)
+						<div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 wow fadeIn">
+						  <div class="card border-0 shadow-lg h-100">
+							<img src="/storage/{{ $category->image }}" class="card-img-top" alt="{{ $category->title }}" style="border-radius: 12px;">
+							<div class="card-body text-center">
+							  <h5 class="card-title">{{ $category->title }}</h5>
+							  <a href="#" class="btn btn-primary">View Courses</a>
+							</div>
+						  </div>
 						</div>
-					</div><!-- End Col -->				
-					@endforeach
+						@endforeach
+					  </div>
 
 				</div>
 			</div>
