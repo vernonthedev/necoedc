@@ -137,6 +137,56 @@
                 padding: 3px 0;
             }
         }
+
+        /* Flex container for the logo and navigation */
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            padding: 10px 20px;
+            width: 100%; 
+        }
+        #main-menu {
+            flex-grow: 1;         }
+
+        #main-menu ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 25px;
+            flex-wrap: nowrap; 
+        }
+
+        #main-menu .sub-menu {
+            display: none;
+            position: absolute;
+            list-style: none;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+
+        #main-menu li.menu-item-has-children:hover .sub-menu {
+            display: block;
+        }
+
+
+        #main-menu ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        #main-menu ul li a:hover {
+            color: #f39119;
+        }
+
+        #main-menu li {
+            width: -webkit-fill-available;
+        }
     </style>
     <!-- Start Top Header -->
     <div class="top-header">
@@ -147,13 +197,17 @@
                 </div>
                 |
                 <div class="col-auto">
-                    <span class="email-info text-white"><a href="#" style="color: white;">NeCo EDC Course Catalogue</a></span>
+                    <span class="email-info text-white"><a href="#" style="color: white;">NeCo EDC Course
+                            Catalogue</a></span>
                 </div>
                 |
                 <div class="col-auto">
-                    <span class="contact-info" ><img src="{{asset('assets/images/whatsapp.png')}}" alt="Whatsapp Icon NeCoEDC Website" width="20px">  <a href="tel:+256783797931" style="color: white;">+256-783-797-931  <img src="{{asset('assets/images/phone.png')}}" alt="Telephone Icon NeCoEDC Website" width="20px"> +254 701 241 860</a></span>
+                    <span class="contact-info"><img src="{{asset('assets/images/whatsapp.png')}}"
+                            alt="Whatsapp Icon NeCoEDC Website" width="20px"> <a href="tel:+256783797931"
+                            style="color: white;">+256-783-797-931 <img src="{{asset('assets/images/phone.png')}}"
+                                alt="Telephone Icon NeCoEDC Website" width="20px"> +254 701 241 860</a></span>
                 </div>
-              
+
             </div>
         </div>
     </div>
@@ -162,21 +216,28 @@
     <header id="navigation">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-30 left-col align-self-center">
-                    <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png')}}" alt="NeCo EDC" width="18%"></a>
-
-                </div><!-- End Col -->
-
-                <div class="col-40 justify-content-center d-flex align-self-center">
+                <!-- End Col -->
+                <div class="">
                     <nav id="main-menu">
                         <ul>
+                            <li>
+
+                                <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png')}}" alt="NeCo EDC"
+                                        width="40%"></a>
+
+
+                            </li>
                             <li>
                                 <a href="{{ route('home')}}">Home</a>
 
                             </li>
 
+                            <li>
+                                <a href="{{route('contact')}}">Our Services</a>
+                            </li>
+
                             <li class="menu-item-has-children">
-                                <a href="{{route('about')}}">About Us</a>
+                                <a href="{{route('about')}}">Training Topics</a>
                                 <ul class="sub-menu">
                                     <li><a href="{{route('about')}}">About NeCo EDC</a></li>
                                     <li><a href="#">In House Solutions</a></li>
@@ -187,14 +248,16 @@
                                 </ul>
                             </li>
 
+                            <li>
+                                <a href="{{route('contact')}}">NeCo HR</a>
+                            </li>
 
-                            <li class="menu-item-has-children">
-                                <a href="#">More Info</a>
-                                <ul class="sub-menu">
-                                    <li><a href="{{route('courses.index')}}">Find Courses</a></li>
-                                    <li><a href="{{ route('blog')}}">Our Blog</a></li>
-                                    <li><a href="{{ route('jobs')}}">Job Applications</a></li>
-                                </ul>
+                            <li>
+                                <a href="{{route('contact')}}">Articles</a>
+                            </li>
+
+                            <li>
+                                <a href="{{route('contact')}}">About Us</a>
                             </li>
 
                             <li>
@@ -202,19 +265,7 @@
                             </li>
                         </ul>
                     </nav>
-                </div><!-- End Col -->
-
-                <div class="col-30 right-col align-self-center text-end">
-                    <div class="searchcart">
-                        <a href="#" class="sicon search-btn"><svg fill="none" viewBox="0 0 20 20">
-                                <path fill="#fff"
-                                    d="M7.536.044a8.418 8.418 0 00-5.1 2.434C1.476 3.44.826 4.487.413 5.745a8.018 8.018 0 000 5.08 7.977 7.977 0 002.03 3.27c1.906 1.896 4.503 2.756 7.182 2.377a8.529 8.529 0 003.846-1.579c.117-.09.223-.156.239-.152.015.008 1.198 1.164 2.628 2.57 1.628 1.603 2.655 2.584 2.749 2.627a.627.627 0 00.89-.47c.063-.327.281-.093-3.999-4.32l-1.335-1.322.226-.265c.976-1.13 1.62-2.56 1.867-4.123.094-.61.094-1.727 0-2.345-.277-1.793-1.062-3.333-2.37-4.634A8.463 8.463 0 007.536.044zm1.87 1.309c1.578.23 2.964.918 4.061 2.012 1.344 1.349 2.043 3.025 2.043 4.92 0 .7-.063 1.18-.227 1.786-.828 3.08-3.635 5.209-6.869 5.209-1.925 0-3.713-.73-5.049-2.067a6.958 6.958 0 01-1.84-3.17c-.288-1.082-.288-2.434 0-3.516A7.082 7.082 0 016.572 1.52c.89-.23 1.98-.297 2.835-.168z" />
-                            </svg></a>
-                    </div>
-
-                    <a href="{{route('register.course.index')}}" class="white-btn bt"
-                        style="background-color: #f39119;">Apply Now</a>
-                </div><!-- End Col -->
+                </div>
 
 
                 <ul class='mobile_menu'>

@@ -221,21 +221,21 @@ img{
 
 #navigation {
 	position: relative;
-	padding: 20px 20px;
+	/* padding: 20px 10px; */
 	z-index: 99;
 }
 #navigation::after {
 	position: absolute;
-	content: '';
 	height: 100%;
 	width: 30%;
-	background-image: url(../img/shapes/header.svg);
 	right: 0;
 	top: 0;
 	z-index: -1;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+
 .site-logo{
 	display: inline-block;
 	position: relative;
