@@ -247,14 +247,8 @@
                                 <a href="{{route('about')}}">Our Services</a>
                             </li>
 
-                            <li class="menu-item-has-children">
-                                <a href="#">Training Topics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="{{route('courses.index')}}">In House Solutions</a></li>
-                                    <li><a href="{{route('courses.index')}}">Employment Law Advisory</a></li>
-                                    <li><a href="{{route('courses.index')}}">Strategy Development</a></li>
-                                    <li><a href="{{route('courses.index')}}">Research And Data Analytics</a></li>
-                                </ul>
+                            <li>
+                                <a href="{{route('courses.index')}}">Training Topics</a>
                             </li>
 
                             <li>
@@ -265,8 +259,16 @@
                                 <a href="{{route('blog')}}">Articles</a>
                             </li>
 
-                            <li>
-                                <a href="{{route('about')}}">About Us</a>
+                            <li class="menu-item-has-children">
+                                <a href="#">About Us</a>
+                                <ul class="sub-menu">
+                                    <li><a href="{{route('about')}}">About NeCo EDC</a></li>
+                                    <li><a href="{{route('about')}}">Our Services</a></li>
+                                    <li><a href="{{route('about')}}">Our Team</a></li>
+                                    <li><a href="{{route('about')}}">Our Clients</a></li>
+                                    <li><a href="{{route('about')}}">Our Partners</a></li>
+                                    <li><a href="{{route('about')}}">Testimonials</a></li>
+                                </ul>
                             </li>
 
                             <li>
@@ -287,14 +289,8 @@
                         <a href="{{route('about')}}">Our Services</a>
                     </li>
 
-                    <li class="menu-item-has-children">
-                        <a href="#">Training Topics</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{route('courses.index')}}">In House Solutions</a></li>
-                            <li><a href="{{route('courses.index')}}">Employment Law Advisory</a></li>
-                            <li><a href="{{route('courses.index')}}">Strategy Development</a></li>
-                            <li><a href="{{route('courses.index')}}">Research And Data Analytics</a></li>
-                        </ul>
+                    <li>
+                        <a href="{{route('courses.index')}}">Training Topics</a>
                     </li>
 
                     <li>
@@ -305,8 +301,16 @@
                         <a href="{{route('blog')}}">Articles</a>
                     </li>
 
-                    <li>
-                        <a href="{{route('about')}}">About Us</a>
+                    <li class="menu-item-has-children">
+                        <a href="#">About Us</a>
+                        <ul class="sub-menu">
+                            <li><a href="{{route('about')}}">About NeCo EDC</a></li>
+                            <li><a href="{{route('about')}}">Our Services</a></li>
+                            <li><a href="{{route('about')}}">Our Team</a></li>
+                            <li><a href="{{route('about')}}">Our Clients</a></li>
+                            <li><a href="{{route('about')}}">Our Partners</a></li>
+                            <li><a href="{{route('about')}}">Testimonials</a></li>
+                        </ul>
                     </li>
 
                     <li>

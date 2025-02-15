@@ -19,16 +19,16 @@
 		<div id="headerCarousel" class="carousel slide" data-bs-ride="carousel">
 		  <div class="carousel-inner">
 			<div class="carousel-item active">
-			  <img src="{{ asset('img/neco (1).jpg')}}" class="d-block w-100" alt="Slide 1">
+			  <img src="{{ asset('img/neco (1).jpg')}}" class="d-block w-100" alt="NeCo Executive Education Center Slider Image">
 			</div>
 			<div class="carousel-item">
-			  <img src="{{ asset('img/neco (12).jpg')}}" class="d-block w-100" alt="Slide 2">
+			  <img src="{{ asset('img/neco (12).jpg')}}" class="d-block w-100" alt="NeCo Executive Education Center Slider Image">
 			</div>
 			<div class="carousel-item">
-			  <img src="{{ asset('img/neco (11).jpg')}}" class="d-block w-100" alt="Slide 3">
+			  <img src="{{ asset('img/neco (11).jpg')}}" class="d-block w-100" alt="NeCo Executive Education Center Slider Image">
 			</div>
 			<div class="carousel-item">
-			  <img src="{{ asset('img/neco (2).jpg')}}" class="d-block w-100" alt="Slide 4">
+			  <img src="{{ asset('img/neco (2).jpg')}}" class="d-block w-100" alt="NeCo Executive Education Center Slider Image">
 			</div>
 		  </div>
 		  
@@ -42,9 +42,9 @@
 		  </button>
 		  
 		  <div class="search-bar text-center">
-			<form class="d-flex">
-			  <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
-			  <button class="btn btn-primary" type="submit">Search</button>
+			<form class="d-flex" action="{{ route('courses.search') }}" method="get">
+			  <input class="form-control me-2" type="text" name="query" placeholder="Search Courses..." aria-label="Search">
+			  <button class="bsearch_btn" type="submit">Search</button>
 			</form>
 		  </div>
 		</div>
