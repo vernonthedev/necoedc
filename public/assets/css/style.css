@@ -2142,9 +2142,9 @@ svg#play_icon:hover #triangle {
 --------------------------------*/
 
 .footer{
-	background: #002935;
+	background: #222854;
 	color: #fff;
-	padding-top: 80px;
+	padding-top: 23px;
 	position: relative;
 }
 .footer a{
@@ -2165,9 +2165,6 @@ svg#play_icon:hover #triangle {
 }
 .about-footer p{
 	padding-right: 10px;
-}
-.footer .newsletter{
-	
 }
 .footer .newsletter form{
 	position: relative;

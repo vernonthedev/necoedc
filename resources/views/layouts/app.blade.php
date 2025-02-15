@@ -231,9 +231,41 @@
 
     {{ $slot }}
 
+    {{-- Company lines above the footer --}}
+    {{-- styling --}}
+    <style>
+        .footer-lines {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .line {
+            height: 20px;
+            width: 100%;
+        }
+
+        .line-1 {
+            background-color: #222854;
+            /* Change to your desired color */
+        }
+
+        .line-2 {
+            background-color: #f39119;
+            /* Change to your desired color */
+        }
+    </style>
+    <div class="footer-lines">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+    </div>
+
+    {{-- End of Company lines --}}
+
+
     <!-- main footer -->
     <section class="footer">
         <div class="container">
+
             <div class="row">
                 <div class="col-xl-7 col-lg-7 wow fadeIn">
                     <h2 class="fntitle">Subscribe to Our Newsletter <br>
@@ -250,7 +282,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="row footer-bottom">
                 <div class="col-xl-3 col-md-6 col-12 wow fadeIn">
                     <div class="single-footer">
@@ -338,18 +369,19 @@
                             <form action="{{route('contact.store')}}" method="post">
                                 @csrf
                                 <div class="row">
-                                    <div class="col-12 col-lg-4"><span><input maxlength="400"
-                                                class="form-control" placeholder="Name*" type="text" required
-                                                name="name" style="height: 30px;"></span></div>
+                                    <div class="col-12 col-lg-4"><span><input maxlength="400" class="form-control"
+                                                placeholder="Name*" type="text" required name="name"
+                                                style="height: 30px;"></span></div>
                                     <div class="col-12 col-lg-4"><span><input maxlength="400" style="height: 30px;"
-                                                class="form-control" placeholder="Phone" type="tel" name="phoneNumber" required></span>
+                                                class="form-control" placeholder="Phone" type="tel" name="phoneNumber"
+                                                required></span>
                                     </div>
                                     <div class="col-12 col-lg-4"><span><input maxlength="400" style="height: 30px;"
                                                 class="form-control" placeholder="Email*" type="email" required
                                                 name="email"></span></div>
 
-                                    <div class="col-12"><span><textarea cols="40" rows="10"
-                                                maxlength="2000" class="form-control" placeholder="Message*" required
+                                    <div class="col-12"><span><textarea cols="40" rows="10" maxlength="2000"
+                                                class="form-control" placeholder="Message*" required
                                                 name="message"></textarea></span></div>
                                     <div class="col-12"><span class="icon-input-btn"><input class="btn btn-primary"
                                                 type="submit" value="Send message"></span></div>
@@ -422,7 +454,8 @@
         </div>
 
         <div class="copyright text-center wow fadeIn">
-            <p>Copyright © {{ date("Y") }} <a href="{{route('home')}}">NeCo Executive Development Center</a>. All rights reserved.
+            <p>Copyright © {{ date("Y") }} <a href="{{route('home')}}">NeCo Executive Development Center</a>. All rights
+                reserved.
             </p>
         </div>
     </section>
