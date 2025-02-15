@@ -7,10 +7,10 @@
 					<div class="col-xl-8 col-lg-7 col-md-12">
 						<div class="banner-content d-flex align-items-center">
 							<div class="banner-content-inner">
-								<span class="subtitle">NeCo Development Centre</span>
+								<span class="subtitle">NeCo Executive Development Centre</span>
 								<h2 class="title"><span style="color: #f39119;">Creating</span> a Better Future through Education</h2>
 								<p>
-									At Neco Development Centre, we are passionate about unlocking<br>
+									At Neco Executive Development Centre, we are passionate about unlocking<br>
                                     the potential within every learner.
 								</p>
 								

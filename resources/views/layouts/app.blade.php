@@ -112,6 +112,52 @@
     </div>
     <!-- End Preloader -->
 
+    {{-- top header style --}}
+    <style>
+        .top-header {
+            background-color: #222854;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 14px;
+        }
+
+        .top-header .contact-info,
+        .top-header .email-info {
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .top-header .row {
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+            }
+
+            .top-header .col-auto {
+                padding: 3px 0;
+            }
+        }
+    </style>
+    <!-- Start Top Header -->
+    <div class="top-header">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-auto">
+                    <span class="email-info">📧 info@necoedc.com</span>
+                </div>
+                |
+                <div class="col-auto">
+                    <span class="email-info text-white"><a href="#" style="color: white;">NeCo EDC Course Catalogue</a></span>
+                </div>
+                |
+                <div class="col-auto">
+                    <span class="contact-info" ><img src="{{asset('assets/images/whatsapp.png')}}" alt="Whatsapp Icon NeCoEDC Website" width="20px">  <a href="tel:+256783797931" style="color: white;">+256-783-797-931  <img src="{{asset('assets/images/phone.png')}}" alt="Telephone Icon NeCoEDC Website" width="20px"> +254 701 241 860</a></span>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    <!-- End Top Header -->
     <!-- Start Header -->
     <header id="navigation">
         <div class="container-fluid">
