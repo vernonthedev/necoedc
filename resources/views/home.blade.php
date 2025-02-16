@@ -1,9 +1,18 @@
 <x-app-layout meta-title="Home | NeCo EDC" meta-description="Welcome to NeCo Education Development Centre">
-	<style>
-		.carousel-item img {
+	  <style>
+		.video-header {
+		  position: relative;
+		  width: 100%;
 		  height: 500px;
+		  overflow: hidden;
+		}
+	  
+		.video-header video {
+		  width: 100%;
+		  height: 100%;
 		  object-fit: cover;
 		}
+	  
 		.search-bar {
 		  position: absolute;
 		  bottom: 30px;
@@ -15,40 +24,21 @@
 		  width: 60%;
 		}
 	  </style>
-	<header>
-		<div id="headerCarousel" class="carousel slide" data-bs-ride="carousel">
-		  <div class="carousel-inner">
-			<div class="carousel-item active">
-			  <img src="{{ asset('img/neco (1).jpg')}}" class="d-block w-100" alt="NeCo Executive Education Center Slider Image">
-			</div>
-			<div class="carousel-item">
-			  <img src="{{ asset('img/neco (12).jpg')}}" class="d-block w-100" alt="NeCo Executive Education Center Slider Image">
-			</div>
-			<div class="carousel-item">
-			  <img src="{{ asset('img/neco (11).jpg')}}" class="d-block w-100" alt="NeCo Executive Education Center Slider Image">
-			</div>
-			<div class="carousel-item">
-			  <img src="{{ asset('img/neco (2).jpg')}}" class="d-block w-100" alt="NeCo Executive Education Center Slider Image">
-			</div>
-		  </div>
-		  
-		  <button class="carousel-control-prev" type="button" data-bs-target="#headerCarousel" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		  </button>
-		  <button class="carousel-control-next" type="button" data-bs-target="#headerCarousel" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		  </button>
-		  
-		  <div class="search-bar text-center">
-			<form class="d-flex" action="{{ route('courses.search') }}" method="get">
-			  <input class="form-control me-2" type="text" name="query" placeholder="Search Courses..." aria-label="Search">
-			  <button class="bsearch_btn" type="submit">Search</button>
-			</form>
-		  </div>
+	  
+	  <header class="video-header">
+		<video autoplay loop muted playsinline>
+		  <source src="{{ asset('assets/video/hr1.webm') }}" type="video/mp4">
+		  Your browser does not support the video tag.
+		</video>
+	  
+		<div class="search-bar text-center">
+		  <form class="d-flex" action="{{ route('courses.search') }}" method="get">
+			<input class="form-control me-2" type="text" name="query" placeholder="Search Courses..." aria-label="Search">
+			<button class="bsearch_btn" type="submit">Search</button>
+		  </form>
 		</div>
 	  </header>
+	  
 
 
 
@@ -73,6 +63,12 @@
 							<h2>Course Categories</h2>
 						</div>
 					</div>	
+					<style>
+						.btn#coursebtn:hover {
+							background-color: #f39119;
+							border-color: #f39119;
+						}
+					</style>
 					
 					<div class="row">
 						@foreach ($categories as $category)
@@ -81,7 +77,7 @@
 							<img src="/storage/{{ $category->image }}" class="card-img-top" alt="{{ $category->title }}" style="border-radius: 12px;">
 							<div class="card-body text-center">
 							  <h5 class="card-title">{{ $category->title }}</h5>
-							  <a href="#" class="btn btn-primary">View Courses</a>
+							  <a href="#" class="btn btn-primary" id="coursebtn">View Courses</a>
 							</div>
 						  </div>
 						</div>
