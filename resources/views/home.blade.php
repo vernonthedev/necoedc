@@ -1,5 +1,5 @@
 <x-app-layout meta-title="Home | NeCo EDC" meta-description="Welcome to NeCo Education Development Centre">
-	  <style>
+	<style>
 		.video-header {
 		  position: relative;
 		  width: 100%;
@@ -11,6 +11,26 @@
 		  width: 100%;
 		  height: 100%;
 		  object-fit: cover;
+		}
+	  
+		.text-overlay {
+		  position: absolute;
+		  top: 20%;
+		  left: 5%;
+		  color: white;
+		  font-size: 2rem;
+		  font-weight: bold;
+		}
+	  
+		@media (max-width: 768px) {
+		  .text-overlay {
+			font-size: 1.5rem;
+			top: 15%;
+			left: 5%;
+		  }
+		  .search-bar {
+			width: 80%;
+		  }
 		}
 	  
 		.search-bar {
@@ -31,6 +51,14 @@
 		  Your browser does not support the video tag.
 		</video>
 	  
+		<div class="text-overlay">
+		  <h1 style="color:white;">Welcome to NeCo EDC</h1>
+		  <p>
+We Are Devoted To
+Helping You And Your 
+Organization Grow!</p>
+		</div>
+	  
 		<div class="search-bar text-center">
 		  <form class="d-flex" action="{{ route('courses.search') }}" method="get">
 			<input class="form-control me-2" type="text" name="query" placeholder="Search Courses..." aria-label="Search">
@@ -38,6 +66,8 @@
 		  </form>
 		</div>
 	  </header>
+	  
+	  
 	  
 
 

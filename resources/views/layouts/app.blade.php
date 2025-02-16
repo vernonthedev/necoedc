@@ -208,7 +208,7 @@
                 </div>
                 |
                 <div class="col-auto">
-                    <span class="email-info text-white"><a href="#" style="color: white;">NeCo EDC Course
+                    <span class="email-info text-white"><a href="#" style="color: white;">Download the NeCo EDC Course
                             Catalogue</a></span>
                 </div>
                 |
