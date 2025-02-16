@@ -206,12 +206,12 @@
                 <div class="col-auto">
                     <span class="email-info">📧 info@necoedc.com</span>
                 </div>
-                |
+                
                 <div class="col-auto">
                     <span class="email-info text-white"><a href="#" style="color: white;">Download the NeCo EDC Course
                             Catalogue</a></span>
                 </div>
-                |
+                
                 <div class="col-auto">
                     <span class="contact-info"><img src="{{asset('assets/images/whatsapp.png')}}"
                             alt="Whatsapp Icon NeCoEDC Website" width="20px"> <a href="tel:+256783797931"
@@ -494,12 +494,16 @@
                                     <div class="col-12 col-lg-4"><span><input maxlength="400" style="height: 30px;"
                                                 class="form-control" placeholder="Email*" type="email" required
                                                 name="email"></span></div>
-
+                                                <style>
+                                                    .btn#coursebtn:hover {
+                                                        background-color: #f39119;
+                                                        border-color: #f39119;
+                                                    }
+                                                </style>
                                     <div class="col-12"><span><textarea cols="40" rows="10" maxlength="2000"
                                                 class="form-control" placeholder="Message*" required
                                                 name="message"></textarea></span></div>
-                                    <div class="col-12"><span class="icon-input-btn"><input class="btn btn-primary"
-                                                type="submit" value="Send message"></span></div>
+                                    <div class="col-12"><span class="icon-input-btn"> <button type="submit" class="btn btn-secondary" id="coursebtn">Send Message</button></span></div>
                                 </div>
 
                             </form>
