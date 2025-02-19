@@ -24,6 +24,10 @@
     <meta name="twitter:title" content="{{ $metaTitle ?: 'NeCo Education Development Centre' }}">
     <meta name="twitter:description" content="Welcome to NeCo Education Development Centre">
     <meta name="twitter:image" content="">
+
+    {{-- Pinterest Domain Verification --}}
+    <meta name="p:domain_verify" content="4aa4fee416653ca4413e11cf04569a4f"/>
+
     <!-- Custom Scroll Bar Configurations-->
     <style>
         body::-webkit-scrollbar {
