@@ -26,7 +26,7 @@
     <meta name="twitter:image" content="">
 
     {{-- Pinterest Domain Verification --}}
-    <meta name="p:domain_verify" content="4aa4fee416653ca4413e11cf04569a4f"/>
+    <meta name="p:domain_verify" content="4aa4fee416653ca4413e11cf04569a4f" />
 
     <!-- Custom Scroll Bar Configurations-->
     <style>
@@ -156,9 +156,10 @@
             #nav-row {
                 flex-wrap: wrap-reverse;
             }
-        #navigation {
-            display: none;
-        }
+
+            #navigation {
+                display: none;
+            }
         }
 
         #main-menu {
@@ -208,19 +209,23 @@
         <div class="container-fluid">
             <div class="row justify-content-between align-items-center">
                 <div class="col-auto">
-                    <span class="email-info">📧 info@necoedc.com</span>
+                    <span class="email-info"><img src="{{asset('assets/images/mail.png')}}"
+                        alt="Mail Icon NeCoEDC Website" width="20px">info@necoedc.com</span>
                 </div>
-                
+
                 <div class="col-auto">
-                    <span class="email-info text-white"><a href="#" style="color: white;">Download the NeCo EDC Course
+                    <span class="email-info text-white"><a href="#" style="color: white;">
+                            <img src="{{asset('assets/images/file.png')}}" alt="Download the NeCo EDC Course
+                            Catalogue" width="25px">
+                            Download the NeCo EDC Course
                             Catalogue</a></span>
                 </div>
-                
+
                 <div class="col-auto">
-                    <span class="contact-info"><img src="{{asset('assets/images/whatsapp.png')}}"
-                            alt="Whatsapp Icon NeCoEDC Website" width="20px"> <a href="tel:+256783797931"
-                            style="color: white;">+256-783-797-931 <img src="{{asset('assets/images/phone.png')}}"
-                                alt="Telephone Icon NeCoEDC Website" width="20px"> +254 701 241 860</a></span>
+                    <span class="contact-info"><a href="tel:+256783797931"
+                        style="color: white;"><img src="{{asset('assets/images/whatsapp.png')}}"
+                            alt="Whatsapp Icon NeCoEDC Website" width="20px"> +256 783797931 <img src="{{asset('assets/images/phone.png')}}"
+                                alt="Telephone Icon NeCoEDC Website" width="20px"> +256 701241860</a></span>
                 </div>
 
             </div>
@@ -370,6 +375,7 @@
         .line-2 {
             background-color: #fff;
         }
+
         .line-3 {
             background-color: #f39119;
         }
@@ -386,20 +392,24 @@
         .footer#footerid {
             font-size: 15px;
         }
+
         .row#footerRow {
-            margin-right: calc(-4* var(--bs-gutter-x)); 
+            margin-right: calc(-4* var(--bs-gutter-x));
             margin-left: calc(-4* var(--bs-gutter-x));
         }
 
-        #inputMail::placeholder{
+        #inputMail::placeholder {
             font-size: 14px;
         }
-        #inputName::placeholder{
+
+        #inputName::placeholder {
             font-size: 14px;
         }
-        #inputPhone::placeholder{
+
+        #inputPhone::placeholder {
             font-size: 14px;
         }
+
         @media (max-width: 767.98px) {
             .row#footerRow {
                 margin-right: calc(-0.5 * var(--bs-gutter-x));
@@ -427,14 +437,14 @@
                     </div>
                 </div>
             </div>
-            <div class="row footer-bottom" id="footerRow" >
+            <div class="row footer-bottom" id="footerRow">
                 <div class="col-xl-3 col-md-6 col-12 wow fadeIn">
                     <div class="single-footer">
                         <div class="about-footer">
                             <div class="footer-logo">
                                 <a href="{{route('home')}}">
-                                    <img src="{{ asset('img/logo-white.png')}}"
-                                        alt="NeCo Executive Development Center" width="50%"></a>
+                                    <img src="{{ asset('img/logo-white.png')}}" alt="NeCo Executive Development Center"
+                                        width="50%"></a>
                             </div>
                             <p>
                                 <i class='bx bx-map'></i>
@@ -448,14 +458,14 @@
                                 <i class='bx bx-phone'></i>
                                 <span>
                                     <a href="tel:+256783797931">+256 783797931</a>
-                                    </span>
+                                </span>
                             </p>
 
                             <p>
                                 <i class='bx bx-envelope'></i>
                                 <span>
                                     <a href="mailto:info@necoedc.org">info@necoedc.org</a>
-                                    </span>
+                                </span>
                             </p>
 
                             <div class="fot-social">
@@ -524,22 +534,24 @@
                                                 placeholder="Name*" type="text" required name="name" id="inputName"
                                                 style="height: 30px;"></span></div>
                                     <div class="col-12 col-lg-4"><span><input maxlength="400" style="height: 30px;"
-                                                class="form-control" placeholder="Phone" type="tel" name="phoneNumber" id="inputNumber"
-                                                required></span>
+                                                class="form-control" placeholder="Phone" type="tel" name="phoneNumber"
+                                                id="inputNumber" required></span>
                                     </div>
                                     <div class="col-12 col-lg-4"><span><input maxlength="400" style="height: 30px;"
-                                                class="form-control" placeholder="Email*" type="email" required id="inputMail"
-                                                name="email"></span></div>
-                                                <style>
-                                                    .btn#coursebtn:hover {
-                                                        background-color: #f39119;
-                                                        border-color: #f39119;
-                                                    }
-                                                </style>
+                                                class="form-control" placeholder="Email*" type="email" required
+                                                id="inputMail" name="email"></span></div>
+                                    <style>
+                                        .btn#coursebtn:hover {
+                                            background-color: #f39119;
+                                            border-color: #f39119;
+                                        }
+                                    </style>
                                     <div class="col-12"><span><textarea cols="40" rows="10" maxlength="2000"
                                                 class="form-control" placeholder="Message*" required
                                                 name="message"></textarea></span></div>
-                                    <div class="col-12"><span class="icon-input-btn"> <button type="submit" class="btn btn-secondary" id="coursebtn" style="font-size: 14px;">Send Message</button></span></div>
+                                    <div class="col-12"><span class="icon-input-btn"> <button type="submit"
+                                                class="btn btn-secondary" id="coursebtn" style="font-size: 14px;">Send
+                                                Message</button></span></div>
                                 </div>
 
                             </form>
