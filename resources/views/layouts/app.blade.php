@@ -400,6 +400,12 @@
         #inputPhone::placeholder{
             font-size: 14px;
         }
+        @media (max-width: 767.98px) {
+            .row#footerRow {
+                margin-right: calc(-0.5 * var(--bs-gutter-x));
+                margin-left: calc(-0.5 * var(--bs-gutter-x));
+            }
+        }
     </style>
     <!-- main footer -->
     <section class="footer" id="footerid">
