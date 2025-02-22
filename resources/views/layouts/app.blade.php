@@ -386,6 +386,20 @@
         .footer#footerid {
             font-size: 14px;
         }
+        .row#footerRow {
+            margin-right: calc(-4* var(--bs-gutter-x)); 
+            margin-left: calc(-4* var(--bs-gutter-x));
+        }
+
+        #inputMail::placeholder{
+            font-size: 14px;
+        }
+        #inputName::placeholder{
+            font-size: 14px;
+        }
+        #inputPhone::placeholder{
+            font-size: 14px;
+        }
     </style>
     <!-- main footer -->
     <section class="footer" id="footerid">
@@ -407,7 +421,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row footer-bottom">
+            <div class="row footer-bottom" id="footerRow">
                 <div class="col-xl-3 col-md-6 col-12 wow fadeIn">
                     <div class="single-footer">
                         <div class="about-footer">
@@ -422,7 +436,7 @@
                             <p>
                                 <i class='bx bx-phone'></i>
                                 <span>
-                                    +256-783-797-931</span>
+                                    +256 783797931</span>
                             </p>
 
                             <p>
@@ -494,14 +508,14 @@
                                 @csrf
                                 <div class="row">
                                     <div class="col-12 col-lg-4"><span><input maxlength="400" class="form-control"
-                                                placeholder="Name*" type="text" required name="name"
+                                                placeholder="Name*" type="text" required name="name" id="inputName"
                                                 style="height: 30px;"></span></div>
                                     <div class="col-12 col-lg-4"><span><input maxlength="400" style="height: 30px;"
-                                                class="form-control" placeholder="Phone" type="tel" name="phoneNumber"
+                                                class="form-control" placeholder="Phone" type="tel" name="phoneNumber" id="inputNumber"
                                                 required></span>
                                     </div>
                                     <div class="col-12 col-lg-4"><span><input maxlength="400" style="height: 30px;"
-                                                class="form-control" placeholder="Email*" type="email" required
+                                                class="form-control" placeholder="Email*" type="email" required id="inputMail"
                                                 name="email"></span></div>
                                                 <style>
                                                     .btn#coursebtn:hover {
@@ -512,7 +526,7 @@
                                     <div class="col-12"><span><textarea cols="40" rows="10" maxlength="2000"
                                                 class="form-control" placeholder="Message*" required
                                                 name="message"></textarea></span></div>
-                                    <div class="col-12"><span class="icon-input-btn"> <button type="submit" class="btn btn-secondary" id="coursebtn">Send Message</button></span></div>
+                                    <div class="col-12"><span class="icon-input-btn"> <button type="submit" class="btn btn-secondary" id="coursebtn" style="font-size: 14px;">Send Message</button></span></div>
                                 </div>
 
                             </form>

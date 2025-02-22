@@ -969,24 +969,6 @@ img{
 	position: relative;
 	display: inline-block;
 }
-/* .counter-title h2::before {
-	content: '';
-	width: 80px;
-	position: absolute;
-	height: 2px;
-	background: #222854;
-	left: -140px;
-	top: 17px;
-}
-.counter-title h2:after{
-	content: '';
-	width: 80px;
-	position: absolute;
-	height: 2px;
-	background: #222854;
-	right: -140px;
-	top: 17px;
-} */
 .counter-title h2 span{
 	color: #222854;
 }
@@ -2197,8 +2179,7 @@ svg#play_icon:hover #triangle {
 }
 .footer-bottom{
 	border-top: 1px solid rgba(225,225,225,0.08);
-	padding-top: 50px;
-	margin-top: 50px;
+	padding-top: 30px;
 }
 .fstyle-2 .footer-bottom{
 	border-top: none;
