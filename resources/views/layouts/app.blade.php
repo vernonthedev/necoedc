@@ -415,8 +415,7 @@
                             </div>
                             <p>
                                 <i class='bx bx-map'></i>
-                                <span>Plot 2B Moyo Close - Off <br>
-                                    Prince Charles Drive, Kololo </span>
+                                <span>Plot 2B Moyo Close Kololo </span>
                             </p>
                             <p>
                                 <i class='bx bx-phone'></i>
@@ -431,7 +430,7 @@
                             </p>
 
                             <div class="fot-social">
-                                <span>Follow Us On :</span>
+                                <span style="font-size: 20px;">Follow Us On :</span>
                                 <ul>
                                     <li>
                                         <a href="https://www.facebook.com/share/1EgjT7C9Se/?mibextid=wwXIfr"><i
@@ -457,7 +456,7 @@
 
                 <div class="col-xl-3 col-md-6 col-12 wow fadeIn">
                     <div class="single-footer">
-                        <h3 class="footer-title">Quick Links</h3>
+                        <h3 class="footer-title" style="font-size: 20px;">Quick Links</h3>
                         <ul>
                             <li><a href="{{route('home')}}">Home</a></li>
                             <li><a href="{{route('about')}}">About Us</a></li>
@@ -472,7 +471,7 @@
 
                 <div class="col-xl-3 col-md-6 col-12 wow fadeIn">
                     <div class="single-footer">
-                        <h3 class="footer-title">Resources</h3>
+                        <h3 class="footer-title" style="font-size: 20px;">Resources</h3>
                         <ul>
                             <li><a href="#">Frequently Asked Questions</a></li>
                             <li><a href="#">Training Topics</a></li>
@@ -487,7 +486,7 @@
 
                 <div class="col-xl-3 col-md-6 col-12 wow fadeIn">
                     <div class="single-footer">
-                        <h3 class="footer-title">Quick Queries</h3>
+                        <h3 class="footer-title" style="font-size: 20px;">Quick Queries</h3>
                         <div class="contact-info">
                             <form action="{{route('contact.store')}}" method="post">
                                 @csrf
