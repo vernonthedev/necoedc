@@ -359,23 +359,25 @@
         }
 
         .line {
-            height: 20px;
+            height: 10px;
             width: 100%;
         }
 
         .line-1 {
             background-color: #222854;
-            /* Change to your desired color */
         }
 
         .line-2 {
+            background-color: #fff;
+        }
+        .line-3 {
             background-color: #f39119;
-            /* Change to your desired color */
         }
     </style>
     <div class="footer-lines">
-        <div class="line line-1"></div>
+        <div class="line line-3"></div>
         <div class="line line-2"></div>
+        <div class="line line-1"></div>
     </div>
 
     {{-- End of Company lines --}}
