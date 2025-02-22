@@ -384,7 +384,7 @@
 
     <style>
         .footer#footerid {
-            font-size: 14px;
+            font-size: 15px;
         }
         .row#footerRow {
             margin-right: calc(-4* var(--bs-gutter-x)); 
@@ -421,14 +421,19 @@
                     </div>
                 </div>
             </div>
-            <div class="row footer-bottom" id="footerRow">
+            <div class="row footer-bottom" id="footerRow" >
                 <div class="col-xl-3 col-md-6 col-12 wow fadeIn">
                     <div class="single-footer">
                         <div class="about-footer">
                             <div class="footer-logo">
-                                <a href="{{route('home')}}"><img src="{{ asset('img/logo-white.png')}}"
+                                <a href="{{route('home')}}">
+                                    <img src="{{ asset('img/logo-white.png')}}"
                                         alt="NeCo Executive Development Center" width="50%"></a>
                             </div>
+                            <p>
+                                <i class='bx bx-map'></i>
+                                <span>P.O. Box 151960 Kampala GPO, Uganda</span>
+                            </p>
                             <p>
                                 <i class='bx bx-map'></i>
                                 <span>Plot 2B Moyo Close Kololo </span>
