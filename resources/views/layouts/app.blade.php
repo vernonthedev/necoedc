@@ -380,9 +380,13 @@
 
     {{-- End of Company lines --}}
 
-
+    <style>
+        .footer#footerid {
+            font-size: 14px;
+        }
+    </style>
     <!-- main footer -->
-    <section class="footer">
+    <section class="footer" id="footerid">
         <div class="container">
 
             <div class="row">
