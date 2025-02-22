@@ -447,13 +447,15 @@
                             <p>
                                 <i class='bx bx-phone'></i>
                                 <span>
-                                    +256 783797931</span>
+                                    <a href="tel:+256783797931">+256 783797931</a>
+                                    </span>
                             </p>
 
                             <p>
                                 <i class='bx bx-envelope'></i>
                                 <span>
-                                    info@necoedc.org</span>
+                                    <a href="mailto:info@necoedc.org">info@necoedc.org</a>
+                                    </span>
                             </p>
 
                             <div class="fot-social">
