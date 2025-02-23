@@ -210,7 +210,7 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-auto">
                     <span class="email-info"><img src="{{asset('assets/images/mail.png')}}"
-                        alt="Mail Icon NeCoEDC Website" width="20px">info@necoedc.com</span>
+                        alt="Mail Icon NeCoEDC Website" width="20px"> info@necoedc.com</span>
                 </div>
 
                 <div class="col-auto">
