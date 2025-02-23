@@ -771,17 +771,17 @@ img{
 	color: #fff;
 	border: 1px solid #222854;
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 17%;
+	right: 2%;
 	border-radius: 8px;
-	width: 160px;
+	width: 140px;
 	height: 50px;
 	transition: .5s;
 }
 .bsearch_btn:hover,
 .bsearch_btn:focus{
-	background: #0F2B5A;
-	border-color: #0F2B5A;
+	background: #f39119;
+	border-color: #f39119;
 }
 .bcate{
 	margin-top: 20px;

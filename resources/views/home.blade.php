@@ -40,6 +40,7 @@
 			left: 50%;
 			transform: translateX(-50%);
 			background-color: rgba(255, 255, 255, 0.9);
+			border: solid #515050dd 4px;
 			padding: 10px;
 			border-radius: 25px;
 			width: 60%;
@@ -67,7 +68,7 @@
 			<h1 style="color:white;">Welcome to NeCo EDC</h1>
 			<p>
 				We are devoted to
-				Helping you and your
+				helping you and your
 				Organization grow!</p>
 		</div>
 		<style>
