@@ -2217,6 +2217,10 @@ svg#play_icon:hover #triangle {
 	color: #222854;
 }
 
+.jo {
+	padding: 10px;
+}
+
 .contact-info p span{
 	overflow: hidden;
 	float: left;

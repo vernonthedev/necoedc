@@ -222,10 +222,14 @@
                 </div>
 
                 <div class="col-auto">
-                    <span class="contact-info"><a href="tel:+256783797931"
-                        style="color: white;"><img src="{{asset('assets/images/whatsapp.png')}}"
-                            alt="Whatsapp Icon NeCoEDC Website" width="20px"> +256 783797931 <img src="{{asset('assets/images/phone.png')}}"
-                                alt="Telephone Icon NeCoEDC Website" width="20px"> +256 701241860</a></span>
+                    <span class="jo">                     
+                            <img src="{{asset('assets/images/whatsapp.png')}}"alt="Whatsapp Icon NeCoEDC Website" width="20px"> +256 783797931
+                    </span>
+                    <span class="jo">
+                            <img src="{{asset('assets/images/phone.png')}}"
+                                alt="Telephone Icon NeCoEDC Website" width="20px"> +256 701241860
+ 
+                    </span>
                 </div>
 
             </div>
