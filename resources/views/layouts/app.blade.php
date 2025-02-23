@@ -239,18 +239,13 @@
     <!-- Start Header -->
     <header id="navigation">
         <div class="container-fluid">
-            <div class="row" id="nav-row">
+            <div class="row" id="nav-row" style="width: 45% !important;">
+                <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png')}}" alt="NeCo EDC"
+                                        width="70px"/></a>
                 <!-- End Col -->
                 <div class="">
                     <nav id="main-menu">
                         <ul>
-                            <li>
-
-                                <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png')}}" alt="NeCo EDC"
-                                        width="40%"></a>
-
-
-                            </li>
                             <li>
                                 <a href="{{ route('home')}}">Home</a>
 
