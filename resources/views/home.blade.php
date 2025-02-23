@@ -36,13 +36,14 @@
 
 		.search-bar {
 			position: absolute;
-			bottom: 30px;
+			bottom: 18%;
 			left: 50%;
 			transform: translateX(-50%);
 			background-color: rgba(255, 255, 255, 0.9);
 			padding: 10px;
 			border-radius: 25px;
 			width: 60%;
+			z-index: 3;
 		}
 
 		.video-overlay {
@@ -81,29 +82,21 @@
 				cursor: pointer;
 				font-size: 14px;
 			}
-
 			.form-control#searchInput {
 				margin-bottom: 0px;
 			}
-		</style>
-
-
-		<div class="search-bar text-center">
-			<form class="d-flex" action="{{ route('courses.search') }}" method="get">
-				<input id="searchInput" class="form-control me-2" type="text" name="query"
-					placeholder="Search Courses..." aria-label="Search">
-				<div class="input-group-append">
-					<button class="btn btn-secondary filter-btn" type="button">More Filters</button>
-				</div>
-				<button class="bsearch_btn" type="submit">Search</button>
-			</form>
-		</div>
+		</style>	
 	</header>
-
-
-
-
-
+	<div class="search-bar text-center">
+		<form class="d-flex" action="{{ route('courses.search') }}" method="get">
+			<input id="searchInput" class="form-control me-2" type="text" name="query"
+				placeholder="Search Courses..." aria-label="Search">
+			<div class="input-group-append">
+				<button class="btn btn-secondary filter-btn" type="button">More Filters</button>
+			</div>
+			<button class="bsearch_btn" type="submit">Search</button>
+		</form>
+	</div>
 
 
 	<!-- Start Course Category -->
