@@ -54,14 +54,60 @@
 		<div class="text-overlay">
 		  <h1 style="color:white;">Welcome to NeCo EDC</h1>
 		  <p>
-We Are Devoted To
-Helping You And Your 
-Organization Grow!</p>
+We are devoted to
+Helping you and your 
+Organization grow!</p>
 		</div>
-	  
+	  <style>
+	.search-form {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust width as needed */
+    margin: auto;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 12px 140px 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    outline: none;
+}
+
+.filter-btn {
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ccc;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.form-control#searchInput {
+	margin-bottom: 0px;
+}
+	  </style>
+
+
 		<div class="search-bar text-center">
 		  <form class="d-flex" action="{{ route('courses.search') }}" method="get">
-			<input class="form-control me-2" type="text" name="query" placeholder="Search Courses..." aria-label="Search">
+			<input id="searchInput" class="form-control me-2" type="text" name="query" placeholder="Search Courses..." aria-label="Search">
+			<div class="input-group-append">
+                <button class="btn btn-secondary filter-btn" type="button">More Filters</button>
+            </div>
 			<button class="bsearch_btn" type="submit">Search</button>
 		  </form>
 		</div>

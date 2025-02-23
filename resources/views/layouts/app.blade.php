@@ -245,7 +245,7 @@
                 <!-- End Col -->
                 <div class="">
                     <nav id="main-menu">
-                        <ul>
+                        <ul style="display: flex; flex-wrap: nowrap; justify-content: space-between;">
                             <li>
                                 <a href="{{ route('home')}}">Home</a>
 
